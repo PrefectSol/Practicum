@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="78ab19f1-db1a-4bfb-ade0-bb227fc1d4bf" name="Changes" comment="12">
+      <change afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/.idea/MPM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/Function.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/IntegralMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/src/main/resources/com/mpm/demo/Function.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/src/main/resources/com/mpm/demo/IntegralMatcher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/Function.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/Function.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/HelloApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/HelloController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/IntegralMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/IntegralMatcher.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/com/mpm/demo/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MPM/demo/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MPM/demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MPM/demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../MPM/demo/src/main/java/com/mpm/demo/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MPM/demo/src/main/resources/com/mpm/demo/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../MPM/demo/src/main/resources/com/mpm/demo/hello-view.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2RmH8br8eDkEi9o54fkIxax5YoD" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/student-csu/Desktop/Praktika/Practicum/MFI2",
+    "settings.editor.selected.configurable": "preferences.general"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78ab19f1-db1a-4bfb-ade0-bb227fc1d4bf" name="Changes" comment="" />
+      <created>1687848178852</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1687848178852</updated>
+    </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1687849308521</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687849308521</updated>
+    </task>
+    <task id="LOCAL-00002" summary="12">
+      <created>1687849387477</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687849387477</updated>
+    </task>
+    <task id="LOCAL-00003" summary="12">
+      <created>1687849483047</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687849483047</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="1" />
+    <MESSAGE value="12" />
+    <option name="LAST_COMMIT_MESSAGE" value="12" />
+  </component>
+</project>
