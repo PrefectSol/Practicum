@@ -38,8 +38,8 @@
           <children>
             <TableView fx:id="table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
-                <TableColumn fx:id="cl1" prefWidth="300.0" text="Телефон" />
-                <TableColumn fx:id="cl2" prefWidth="300.0" text="Ф.И.О" />
+                <TableColumn fx:id="cl1" prefWidth="300.0" text="Ф.И.О." />
+                <TableColumn fx:id="cl2" prefWidth="300.0" text="Телефон" />
               </columns>
               <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
