@@ -1,4 +1,4 @@
-package com.practic.practicum;
+package com.mfi.practic;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

@@ -1,4 +1,4 @@
-package com.practic.practicum;
+package com.mpm.demo;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
