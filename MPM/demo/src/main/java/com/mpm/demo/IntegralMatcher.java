@@ -5,7 +5,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
-import javafx.scene.paint.Paint;
 
 public class IntegralMatcher
 {
@@ -63,8 +62,10 @@ public class IntegralMatcher
             return;
         }
 
-        Functions.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
-            if (newValue != null) {
+        Functions.selectedToggleProperty().addListener((observable, oldValue, newValue) ->
+        {
+            if (newValue != null)
+            {
                 RadioButton selectedRadioButton = (RadioButton) newValue;
                 switch (selectedRadioButton.getId()) {
                     case "cosRB":
