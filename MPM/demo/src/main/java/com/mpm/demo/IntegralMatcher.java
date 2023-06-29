@@ -5,6 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 
 public class IntegralMatcher
 {
@@ -17,6 +18,7 @@ public class IntegralMatcher
     public RadioButton ctgRB;
     public TextField partsCount;
     public Label valueLayout;
+    public AnchorPane backgr;
 
     enum Func
     {
@@ -27,6 +29,12 @@ public class IntegralMatcher
     };
 
     Func activeFunction = Func.cos;
+
+    @FXML
+    public void initialize()
+    {
+        backgr.setStyle(HelloController.getStyle());
+    }
 
     @FXML
     protected void onCalculateClick()

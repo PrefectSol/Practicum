@@ -1,10 +1,12 @@
 package com.mpm.demo;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
@@ -12,6 +14,7 @@ import javafx.stage.Stage;
 import static javafx.application.Application.launch;
 
 public class Function {
+    public AnchorPane backgr;
 //радиобатн
         public void start(Stage primaryStage) {
             GridPane gridPane = new GridPane();
@@ -53,6 +56,7 @@ public class Function {
             primaryStage.show();
         }
 
+
         // Здесь определяем функцию, которую нужно расчитать в точке (x, y)
         private double function(double x, double y) {
             return x * y + Math.sin(x) + Math.cos(y);
@@ -61,4 +65,10 @@ public class Function {
         public static void main(String[] args) {
             launch(args);
         }
+
+    @FXML
+    public void initialize()
+    {
+        backgr.setStyle(HelloController.getStyle());
+    }
     }

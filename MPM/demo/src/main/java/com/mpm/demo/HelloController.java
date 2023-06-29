@@ -22,6 +22,7 @@ public class HelloController
     public RadioButton cthRB;
     public Label angleValue;
     public TextField angleInput;
+    private static String M_Style;
 
     enum Func
     {
@@ -57,13 +58,15 @@ public class HelloController
     {
         String style = VboxContainer.getStyle();
 
-        if (style.equals("-fx-background-color: #696969;"))
+        if (style.equals("-fx-background-color: #FAFAD2;"))
         {
-            VboxContainer.setStyle("-fx-background-color: #FFFFFF;");
+            M_Style = "-fx-background-color: #FFFFFF;";
+            VboxContainer.setStyle(M_Style);
         }
         else
         {
-            VboxContainer.setStyle("-fx-background-color: #696969;");
+            M_Style = "-fx-background-color: #FAFAD2;";
+            VboxContainer.setStyle(M_Style);
         }
     }
 
@@ -83,6 +86,11 @@ public class HelloController
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static String getStyle()
+    {
+        return M_Style;
     }
 
     @FXML
