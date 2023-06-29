@@ -4,11 +4,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+
+import java.util.ArrayList;
 
 public class HelloController {
     private String type = "";
@@ -72,23 +75,30 @@ public class HelloController {
         personData.add(user);
         table.setItems(personData);
         otmena();
-        int j = personData.size();
-        Label text1 = new Label(value1.getText());
-        Label text2 = new Label(value2.getText());
-        Button button = new Button("Delete");
-        gp.add(text1,0,j);
-        gp.add(text2,1,j);
-        button.setId(String.valueOf(personData.size()-1));
-        button.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent mouseEvent) {
-                personData.remove(Integer.parseInt(String.valueOf(button.getId())));
-                gp.getChildren().remove(button);
-                gp.getChildren().remove(text1);
-                gp.getChildren().remove(text2);
-            }
-        });
-        gp.add(button,2,j);
+        addDelForm();
+    }
+    private void addDelForm(){
+        gp.getChildren().clear();
+        for(int i = 0,d, j = 0; i < personData.size(); i++){
+            d = 0;
+            Label text = new Label(personData.get(i).getFio());
+            gp.add(text,d,j);
+            d++;
+            text = new Label(personData.get(i).getPhone());
+            gp.add(text,d,j);
+            d++;
+            Button button = new Button("Delete");
+            button.setId(String.valueOf(j));
+            button.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    personData.remove(Integer.parseInt(String.valueOf(button.getId())));
+                    addDelForm();
+                }
+            });
+            gp.add(button,d,j);
+            j++;
+        }
     }
     @FXML
     private void delete(){
