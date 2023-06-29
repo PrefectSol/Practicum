@@ -4,51 +4,46 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.IntegralMatcher">
-   <RadioButton layoutX="14.0" layoutY="59.0" mnemonicParsing="false" selected="true" text="Cos" fx:id="cosRB">
+<AnchorPane fx:id="backgr" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.IntegralMatcher">
+   <RadioButton fx:id="cosRB" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" selected="true" text="Cos">
       <toggleGroup>
-         <ToggleGroup fx:id="Functions"/>
+         <ToggleGroup fx:id="Functions" />
       </toggleGroup>
    </RadioButton>
-   <RadioButton layoutX="84.0" layoutY="59.0" mnemonicParsing="false" text="Sin" toggleGroup="$Functions"
-                fx:id="sinRB"/>
-   <RadioButton layoutX="18.0" layoutY="99.0" mnemonicParsing="false" text="Tg" toggleGroup="$Functions" fx:id="tgRB"/>
-   <RadioButton layoutX="83.0" layoutY="99.0" mnemonicParsing="false" text="Ctg" toggleGroup="$Functions"
-                fx:id="ctgRB"/>
+   <RadioButton fx:id="sinRB" layoutX="84.0" layoutY="59.0" mnemonicParsing="false" text="Sin" toggleGroup="$Functions" />
+   <RadioButton fx:id="tgRB" layoutX="18.0" layoutY="99.0" mnemonicParsing="false" text="Tg" toggleGroup="$Functions" />
+   <RadioButton fx:id="ctgRB" layoutX="83.0" layoutY="99.0" mnemonicParsing="false" text="Ctg" toggleGroup="$Functions" />
    <Label layoutX="14.0" layoutY="24.0" text="Интегрируемая функция">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
    <Label layoutX="14.0" layoutY="143.0" text="Нижний предел интегрирования">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
    <Label layoutX="12.0" layoutY="221.0" text="Верхний предел интегрирования">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <TextField layoutX="16.0" layoutY="174.0" fx:id="lowerLimit" />
-   <TextField layoutX="16.0" layoutY="252.0" fx:id="upperLimit"/>
+   <TextField fx:id="lowerLimit" layoutX="16.0" layoutY="174.0" />
+   <TextField fx:id="upperLimit" layoutX="16.0" layoutY="252.0" />
    <Label layoutX="12.0" layoutY="300.0" text="Количество разбиений">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
-   <TextField layoutX="16.0" layoutY="331.0" fx:id="partsCount"/>
-   <Button layoutX="300.0" layoutY="329.0" mnemonicParsing="false" text="Вычислить методом трапеций"
-           onAction="#onCalculateClick">
+   <TextField fx:id="partsCount" layoutX="16.0" layoutY="331.0" />
+   <Button layoutX="300.0" layoutY="329.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Вычислить методом трапеций">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Button>
-   <Label layoutX="300.0" layoutY="300.0" fx:id="valueLayout">
+   <Label fx:id="valueLayout" layoutX="300.0" layoutY="300.0">
       <font>
-         <Font size="15.0"/>
+         <Font size="15.0" />
       </font>
    </Label>
 </AnchorPane>
