@@ -47,14 +47,35 @@
             </TableView>
             <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
-                <ButtonBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0">
+                <ButtonBar prefHeight="40.0" prefWidth="200.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="219.20000000000005" AnchorPane.topAnchor="208.0">
                   <buttons>
                     <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
                     <Button layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#otmena" text="Отмена" />
                   </buttons>
                 </ButtonBar>
-                <TextField fx:id="value1" />
-                <TextField fx:id="value2" AnchorPane.leftAnchor="1.0028421709430403E-11" AnchorPane.rightAnchor="449.6" AnchorPane.topAnchor="50.0" />
+                <HBox fillHeight="false" spacing="5.0" AnchorPane.bottomAnchor="172.4" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.00000000000006" AnchorPane.topAnchor="150.0">
+                  <children>
+                    <TextField fx:id="value1" promptText="ФИО" />
+                    <TextField fx:id="value2" promptText="Телефон" />
+                  </children>
+                </HBox>
+              </children>
+            </AnchorPane>
+            <AnchorPane fx:id="edit" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <GridPane fx:id="gp" gridLinesVisible="true" prefHeight="26.0" prefWidth="599.0" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  </columnConstraints>
+                  <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  </rowConstraints>
+                  <children>
+                    <Label text="Телефон" />
+                    <Label text="ФИО" GridPane.columnIndex="1" />
+                  </children>
+                </GridPane>
               </children>
             </AnchorPane>
           </children>
@@ -63,3 +84,4 @@
     </SplitPane>
   </children>
 </AnchorPane>
+

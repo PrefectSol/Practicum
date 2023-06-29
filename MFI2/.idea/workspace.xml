@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="kjuby21">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/Person.java" afterDir="false" />
+    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="del">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/Add.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/add.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
