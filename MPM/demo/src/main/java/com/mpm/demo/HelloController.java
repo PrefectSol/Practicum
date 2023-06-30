@@ -58,14 +58,14 @@ public class HelloController
     {
         String style = VboxContainer.getStyle();
 
-        if (style.equals("-fx-background-color: #FAFAD2;"))
+        if (style.equals("-fx-background-color: #9C9C9C;"))
         {
-            M_Style = "-fx-background-color: #FFFFFF;";
+            M_Style = "-fx-background-color: white;";
             VboxContainer.setStyle(M_Style);
         }
         else
         {
-            M_Style = "-fx-background-color: #FAFAD2;";
+            M_Style = "-fx-background-color: #9C9C9C;";
             VboxContainer.setStyle(M_Style);
         }
     }
