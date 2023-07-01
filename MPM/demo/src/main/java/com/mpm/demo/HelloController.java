@@ -135,7 +135,7 @@ public class HelloController
         Boolean isEmptyString = angleInput.getText().isEmpty();
         if (isEmptyString)
         {
-            angleValue.setText("Error");
+            angleValue.setText("Значение: Error");
             return;
         }
 
@@ -146,7 +146,7 @@ public class HelloController
         }
         catch (Exception e)
         {
-            angleValue.setText("Error");
+            angleValue.setText("Значение: Error");
             return;
         }
 
@@ -193,6 +193,6 @@ public class HelloController
             result = Double.toString(1.0 / Math.tan(angleInputValue));
         }
 
-        angleValue.setText(result);
+        angleValue.setText("Значение: " + result);
     }
 }

@@ -19,7 +19,7 @@ public class HelloApplication extends Application
         stage.setTitle("Matcher");
 
         final int w = 616;
-        final int h = 455;
+        final int h = 500;
 
         stage.setMinWidth(w);
         stage.setMinHeight(h);
