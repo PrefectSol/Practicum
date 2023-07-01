@@ -10,6 +10,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 public class HelloController
@@ -23,6 +25,8 @@ public class HelloController
     public Label angleValue;
     public TextField angleInput;
     private static String M_Style;
+
+    private IntegralMatcher matcher;
 
     enum Func
     {
@@ -58,34 +62,66 @@ public class HelloController
     {
         String style = VboxContainer.getStyle();
 
-        if (style.equals("-fx-background-color: #9C9C9C;"))
+        if (style.equals("-fx-background-color: #D9D9D9;"))
         {
             M_Style = "-fx-background-color: white;";
             VboxContainer.setStyle(M_Style);
         }
         else
         {
-            M_Style = "-fx-background-color: #9C9C9C;";
+            M_Style = "-fx-background-color: #D9D9D9;";
             VboxContainer.setStyle(M_Style);
+        }
+
+        if (matcher != null)
+        {
+            matcher.initialize();
         }
     }
 
     @FXML
     protected void onIntegralClick()
     {
-        try {
+        if (matcher != null)
+        {
+            return;
+        }
+
+        try
+        {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("IntegralMatcher.fxml"));
 
             Scene scene = new Scene(loader.load());
+            matcher = loader.getController();
+
             Stage stage = new Stage();
 
-            stage.setTitle("IntegralMatcher");
-            stage.setScene(scene);
+            final int w = 600;
+            final int h = 420;
 
+            stage.setTitle("IntegralMatcher");
+            stage.setMinWidth(w);
+            stage.setMinHeight(h);
+            stage.setWidth(w);
+            stage.setHeight(h);
+            stage.setMaxWidth(w);
+            stage.setMaxHeight(h);
+            stage.setResizable(false);
+            stage.initStyle(StageStyle.UTILITY);
+            stage.setScene(scene);
             stage.show();
-        } catch (IOException e) {
+
+            stage.setOnCloseRequest((WindowEvent event) ->
+            {
+                matcher = null;
+            });
+
+        }
+        catch (IOException e)
+        {
             e.printStackTrace();
         }
+
     }
 
     public static String getStyle()

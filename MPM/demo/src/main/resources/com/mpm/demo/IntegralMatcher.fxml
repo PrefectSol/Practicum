@@ -2,17 +2,18 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="backgr" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.IntegralMatcher">
+<AnchorPane fx:id="backgr" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.IntegralMatcher">
    <RadioButton fx:id="cosRB" layoutX="14.0" layoutY="59.0" mnemonicParsing="false" selected="true" text="Cos">
       <toggleGroup>
          <ToggleGroup fx:id="Functions" />
       </toggleGroup>
    </RadioButton>
    <RadioButton fx:id="sinRB" layoutX="84.0" layoutY="59.0" mnemonicParsing="false" text="Sin" toggleGroup="$Functions" />
-   <RadioButton fx:id="tgRB" layoutX="18.0" layoutY="99.0" mnemonicParsing="false" text="Tg" toggleGroup="$Functions" />
-   <RadioButton fx:id="ctgRB" layoutX="83.0" layoutY="99.0" mnemonicParsing="false" text="Ctg" toggleGroup="$Functions" />
+   <RadioButton fx:id="tgRB" layoutX="14.0" layoutY="98.0" mnemonicParsing="false" text="Tg" toggleGroup="$Functions" />
+   <RadioButton fx:id="ctgRB" layoutX="83.0" layoutY="98.0" mnemonicParsing="false" text="Ctg" toggleGroup="$Functions" />
    <Label layoutX="14.0" layoutY="24.0" text="Интегрируемая функция">
       <font>
          <Font size="15.0" />
@@ -36,14 +37,25 @@
       </font>
    </Label>
    <TextField fx:id="partsCount" layoutX="16.0" layoutY="331.0" />
-   <Button layoutX="300.0" layoutY="329.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Вычислить методом трапеций">
+   <Button layoutX="300.0" layoutY="206.0" mnemonicParsing="false" onAction="#onCalculateClick" text="Вычислить методом трапеций">
       <font>
          <Font size="15.0" />
       </font>
    </Button>
-   <Label fx:id="valueLayout" layoutX="300.0" layoutY="300.0">
+   <Label fx:id="valueLayout" layoutX="304.0" layoutY="250.0" prefHeight="31.0" prefWidth="245.0" text="Значение:">
       <font>
          <Font size="15.0" />
       </font>
    </Label>
+   <Line endX="-100.0" layoutX="339.0" layoutY="108.0" startX="-100.0" />
+   <RadioButton layoutX="300.0" layoutY="57.0" mnemonicParsing="false" text="X" toggleGroup="$Functions" fx:id="xRB" />
+   <RadioButton layoutX="370.0" layoutY="57.0" mnemonicParsing="false" text="X^2" toggleGroup="$Functions" fx:id="x2RB" />
+   <RadioButton layoutX="300.0" layoutY="98.0" mnemonicParsing="false" text="X^3" toggleGroup="$Functions" fx:id="x3RB" />
+   <RadioButton layoutX="370.0" layoutY="99.0" mnemonicParsing="false" text="X^4" toggleGroup="$Functions" fx:id="x4RB" />
+   <Label layoutX="300.0" layoutY="22.0" prefHeight="21.0" prefWidth="208.0" text="Дополнительные функции">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Label>
+   <Line endX="-100.0" endY="275.0" layoutX="373.0" layoutY="96.0" startX="-100.0" startY="-64.0" AnchorPane.bottomAnchor="28.5" AnchorPane.leftAnchor="272.5" AnchorPane.rightAnchor="326.5" AnchorPane.topAnchor="31.5" />
 </AnchorPane>

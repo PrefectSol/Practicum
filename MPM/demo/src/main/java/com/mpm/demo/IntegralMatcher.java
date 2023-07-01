@@ -19,13 +19,21 @@ public class IntegralMatcher
     public TextField partsCount;
     public Label valueLayout;
     public AnchorPane backgr;
+    public RadioButton xRB;
+    public RadioButton x2RB;
+    public RadioButton x3RB;
+    public RadioButton x4RB;
 
     enum Func
     {
         sin,
         cos,
         tg,
-        ctg
+        ctg,
+        x,
+        x2,
+        x3,
+        x4
     };
 
     Func activeFunction = Func.cos;
@@ -43,7 +51,7 @@ public class IntegralMatcher
         Boolean isEmptyString = lowerLimit.getText().isEmpty() || upperLimit.getText().isEmpty() || partsCount.getText().isEmpty();
         if (isEmptyString)
         {
-            valueLayout.setText("Error");
+            valueLayout.setText("Значение: Error");
             return;
         }
 
@@ -59,14 +67,14 @@ public class IntegralMatcher
         }
         catch (Exception e)
         {
-            valueLayout.setText("Error");
+            valueLayout.setText("Значение: Error");
             return;
         }
 
         Boolean isInvalidValues = llValue > ulValue || count <= 0;
         if (isInvalidValues)
         {
-            valueLayout.setText("Error");
+            valueLayout.setText("Значение: Error");
             return;
         }
 
@@ -88,17 +96,29 @@ public class IntegralMatcher
                     case "ctgRB":
                         activeFunction = Func.ctg;
                         break;
+                    case "xRB":
+                        activeFunction = Func.x;
+                        break;
+                    case "x2RB":
+                        activeFunction = Func.x2;
+                        break;
+                    case "x3RB":
+                        activeFunction = Func.x3;
+                        break;
+                    case "x4RB":
+                        activeFunction = Func.x4;
+                        break;
                 }
             }
         });
 
-        valueLayout.setText(Double.toString(TrapezoidIntegral(llValue, ulValue, count)));
+        valueLayout.setText("Значение: " + Double.toString(TrapezoidIntegral(llValue, ulValue, count)));
     }
 
     private double TrapezoidIntegral(double a, double b, int n)
     {
         double segment = (b - a) / n;
-        double x = a; // to radians
+        double x = a;
         double S = 0;
 
         for(int i = 0; i <= n; i++)
@@ -119,10 +139,30 @@ public class IntegralMatcher
                 sideA = Math.abs(Math.tan(x));
                 sideB = Math.abs(Math.tan(x + segment));
             }
-            else
+            else if (activeFunction == Func.ctg)
             {
                 sideA = Math.abs(1.0 / Math.tan(x));
                 sideB = Math.abs(1.0 / Math.tan(x + segment));
+            }
+            else if (activeFunction == Func.x)
+            {
+                sideA = Math.abs(x);
+                sideB = Math.abs(x + segment);
+            }
+            else if (activeFunction == Func.x2)
+            {
+                sideA = Math.abs(Math.pow(x, 2));
+                sideB = Math.abs(Math.pow(x + segment, 2));
+            }
+            else if (activeFunction == Func.x3)
+            {
+                sideA = Math.abs(Math.pow(x, 3));
+                sideB = Math.abs(Math.pow(x + segment, 3));
+            }
+            else
+            {
+                sideA = Math.abs(Math.pow(x, 4));
+                sideB = Math.abs(Math.pow(x + segment, 4));
             }
 
             S += (sideA + sideB) * segment / 2.0;
