@@ -50,7 +50,7 @@ public class HelloController {
         table.setVisible(true);
     }
     private boolean isLightMode = true;
-    @FXML
+  @FXML
     public void switchTheme(ActionEvent event) {
         isLightMode = !isLightMode;
         if (isLightMode){
@@ -59,16 +59,16 @@ public class HelloController {
         else {
             setDarkMode();
         }
-        /*if(type.equals("White")){
+       if(type.equals("White")){
             type = "Red";
         }else{
             type = "White";
         }
-        table.setStyle("-fx-background-color:" + type);
+         table.setStyle("-fx-background-color:" + type);
         tableFio.setStyle("-fx-background-color:" + type);
         tablePhone.setStyle("-fx-background-color:" + type);
         background.setStyle("-fx-background-color:" + type);
-        sPane.setStyle("-fx-background-color:" + type);*/
+        sPane.setStyle("-fx-background-color:" + type);
     }
     private void setLightMode(){
         sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
