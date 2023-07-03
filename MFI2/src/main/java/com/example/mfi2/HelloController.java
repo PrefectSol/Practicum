@@ -117,13 +117,22 @@ public class HelloController {
         table.setItems(sortedData);
     }
     @FXML
-    private void add(){
-        Person user = new Person(value2.getText(),value1.getText());
-        personData.add(user);
-        table.setItems(personData);
-        otmena();
-        addDelForm();
-        search();
+    private void add() {
+        String a = value2.getText();
+        String b = value1.getText();
+        try {
+            if (a.matches("\\d{11}") && b.matches("[A-Za-z]+")) {
+                Person user = new Person(a, b);
+                personData.add(user);
+                table.setItems(personData);
+                otmena();
+                addDelForm();
+                search();
+            } else {
+                throw new IllegalArgumentException();
+            }
+        } catch (IllegalArgumentException e) {
+        }
     }
     private void addDelForm(){
         gp.getChildren().clear();

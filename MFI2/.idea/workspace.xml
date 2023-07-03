@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="">
+    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="поиск">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688410157439</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="поиск">
+      <created>1688414616343</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688414616343</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -146,6 +155,7 @@
     <MESSAGE value="kjuby21" />
     <MESSAGE value="обновление таблицы" />
     <MESSAGE value="обновление таблицыы" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновление таблицыы" />
+    <MESSAGE value="поиск" />
+    <option name="LAST_COMMIT_MESSAGE" value="поиск" />
   </component>
 </project>
