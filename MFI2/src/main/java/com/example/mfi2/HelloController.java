@@ -2,10 +2,13 @@ package com.example.mfi2;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -23,6 +26,8 @@ public class HelloController {
     private AnchorPane background;
     @FXML
     private SplitPane sPane;
+    @FXML
+    private TextField filterField;
     @FXML
     private AnchorPane addForm;
     @FXML
@@ -90,14 +95,35 @@ public class HelloController {
         table.setVisible(true);
         tableFio.setCellValueFactory(new PropertyValueFactory<>("phone"));
         tablePhone.setCellValueFactory(new PropertyValueFactory<>("fio"));
+        search();
+    }
+    private void search(){
+        FilteredList<Person> filteredData = new FilteredList<>(personData, b -> true);
+        filterField.textProperty().addListener((observable, oldValue, newValue) -> filteredData.setPredicate(Person -> {
+            if (newValue == null || newValue.isEmpty()) {
+                return true;
+            }
+            String lowerCaseFilter = newValue.toLowerCase();
+            if (Person.getFio().toLowerCase().contains(lowerCaseFilter)) {
+                return true;
+            } else if (String.valueOf(Person.getPhone()).contains(lowerCaseFilter)) {
+                return true;
+            } else {
+                return false;
+            }
+        }));
+        SortedList<Person> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(table.comparatorProperty());
+        table.setItems(sortedData);
     }
     @FXML
     private void add(){
-        Person user = new Person(value1.getText(),value2.getText());
+        Person user = new Person(value2.getText(),value1.getText());
         personData.add(user);
         table.setItems(personData);
         otmena();
         addDelForm();
+        search();
     }
     private void addDelForm(){
         gp.getChildren().clear();

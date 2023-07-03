@@ -32,7 +32,7 @@
               </buttons>
             </ButtonBar>
             <Button fx:id="theme" mnemonicParsing="false" onAction="#switchTheme" text="Тема" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="11.0" />
-                  <TextField layoutX="197.0" layoutY="7.0" prefHeight="31.0" prefWidth="180.0" promptText="Поиск:" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="221.0" AnchorPane.topAnchor="7.0" />
+                  <TextField fx:id="filterField" layoutX="197.0" layoutY="7.0" prefHeight="31.0" prefWidth="94.0" promptText="Поиск:" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="7.0" />
           </children>
         </AnchorPane>
         <AnchorPane SplitPane.resizableWithParent="false">
