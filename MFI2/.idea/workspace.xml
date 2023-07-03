@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="del">
+    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="kjuby21">
+      <change afterPath="$PROJECT_DIR$/src/main/java/styles/DarkMode.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/styles/LightMode.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f255f358-3909-4153-81e8-144e80718622" />
+        <option name="url" value="https://github.com/PrefectSol/Practicum.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -37,9 +54,15 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/админ/Documents/GitHub/Practicum/MFI2&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/denis/IdeaProjects/darkmode-JavaFx-main&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\denis\OneDrive\Documents\GitHub\Practicum\MFI2\src\main\java\styles" />
+      <recent name="C:\Users\denis\OneDrive\Documents\GitHub\Practicum\MFI2\src\main\java\com\example\mfi2" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,14 +100,7 @@
       <option name="project" value="LOCAL" />
       <updated>1687885786372</updated>
     </task>
-    <task id="LOCAL-00005" summary="del">
-      <created>1688026698660</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1688026698660</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,7 +118,6 @@
     <MESSAGE value="фыв" />
     <MESSAGE value="фыв2" />
     <MESSAGE value="kjuby" />
-    <MESSAGE value="del" />
-    <option name="LAST_COMMIT_MESSAGE" value="del" />
+    <option name="LAST_COMMIT_MESSAGE" value="kjuby" />
   </component>
 </project>

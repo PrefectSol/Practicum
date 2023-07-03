@@ -2,8 +2,10 @@ package com.example.mfi2;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -12,9 +14,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class HelloController {
     private String type = "";
+    private String bordertype = "";
     @FXML
     private AnchorPane background;
     @FXML
@@ -23,6 +27,10 @@ public class HelloController {
     private AnchorPane addForm;
     @FXML
     private TableView<Person> table;
+    @FXML
+    private TableColumn<Person, String> tableFio;
+    @FXML
+    private TableColumn<Person, String> tablePhone;
     @FXML
     private TextField value1;
     @FXML
@@ -41,16 +49,34 @@ public class HelloController {
         unVisible();
         table.setVisible(true);
     }
+    private boolean isLightMode = true;
     @FXML
-    public void switchTheme() {
-        if(type.equals("DarkGray")){
-            type = "white";
-        }else{
-            type = "DarkGray";
+    public void switchTheme(ActionEvent event) {
+        isLightMode = !isLightMode;
+        if (isLightMode){
+            setLightMode();
         }
-        background.setStyle("-fx-background-color:" + type);
-        sPane.setStyle("-fx-background-color:" + type);
+        else {
+            setDarkMode();
+        }
+        /*if(type.equals("White")){
+            type = "Red";
+        }else{
+            type = "White";
+        }
         table.setStyle("-fx-background-color:" + type);
+        tableFio.setStyle("-fx-background-color:" + type);
+        tablePhone.setStyle("-fx-background-color:" + type);
+        background.setStyle("-fx-background-color:" + type);
+        sPane.setStyle("-fx-background-color:" + type);*/
+    }
+    private void setLightMode(){
+        sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
+        sPane.getStylesheets().add((Objects.requireNonNull(getClass().getResource("styles/LightMode.css"))).toExternalForm());
+    }
+    private void setDarkMode(){
+        sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/LightMode.css"))).toExternalForm());
+        sPane.getStylesheets().add((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
     }
     protected void unVisible(){
         table.setVisible(false);
@@ -58,10 +84,6 @@ public class HelloController {
         edit.setVisible(false);
     }
     private ObservableList<Person> personData = FXCollections.observableArrayList();
-    @FXML
-    private TableColumn<Person, String> tableFio;
-    @FXML
-    private TableColumn<Person, String> tablePhone;
     @FXML
     private void initialize() {
         unVisible();
