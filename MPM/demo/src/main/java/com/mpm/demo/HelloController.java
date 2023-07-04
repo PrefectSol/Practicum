@@ -28,6 +28,8 @@ public class HelloController
 
     private IntegralMatcher matcher;
 
+    private Function functionContr;
+
     enum Func
     {
         sin,
@@ -41,17 +43,24 @@ public class HelloController
     @FXML
     protected void onFunctionClick()
     {
+        if (functionContr != null)
+            return;
         try
         {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Function.fxml"));
 
             Scene scene = new Scene(loader.load());
+            functionContr = loader.getController();
 
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("Function");
 
             stage.show();
+            stage.setOnCloseRequest((WindowEvent event) ->
+            {
+                functionContr = null;
+            });
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,6 +86,9 @@ public class HelloController
         {
             matcher.initialize();
         }
+        if (functionContr != null)
+            functionContr.initialize();
+
     }
 
     @FXML
