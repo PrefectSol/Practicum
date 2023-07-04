@@ -28,7 +28,7 @@ public class HelloApplication extends Application
         stage.setMaxWidth(w);
         stage.setMaxHeight(h);
         stage.setResizable(false);
-        stage.initStyle(StageStyle.UTILITY);
+        stage.initStyle(StageStyle.DECORATED);
         stage.setScene(scene);
         stage.show();
     }
