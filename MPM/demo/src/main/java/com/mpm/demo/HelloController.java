@@ -52,9 +52,21 @@ public class HelloController
             Scene scene = new Scene(loader.load());
             functionContr = loader.getController();
 
+            final int w = 344;
+            final int h = 347;
+
             Stage stage = new Stage();
             stage.setScene(scene);
             stage.setTitle("Function");
+            stage.setMinWidth(w);
+            stage.setMinHeight(h);
+            stage.setWidth(w);
+            stage.setHeight(h);
+            stage.setMaxWidth(w);
+            stage.setMaxHeight(h);
+            stage.setResizable(false);
+            stage.initStyle(StageStyle.DECORATED);
+            stage.setScene(scene);
 
             stage.show();
             stage.setOnCloseRequest((WindowEvent event) ->
