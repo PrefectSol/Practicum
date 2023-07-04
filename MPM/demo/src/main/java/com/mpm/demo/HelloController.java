@@ -53,7 +53,7 @@ public class HelloController
             functionContr = loader.getController();
 
             final int w = 344;
-            final int h = 347;
+            final int h = 370;
 
             Stage stage = new Stage();
             stage.setScene(scene);
