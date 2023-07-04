@@ -10,12 +10,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -57,23 +61,25 @@ public class HelloController {
     private boolean isLightMode = true;
   @FXML
     public void switchTheme(ActionEvent event) {
-        isLightMode = !isLightMode;
+      /*isLightMode = !isLightMode;
         if (isLightMode){
             setLightMode();
         }
         else {
             setDarkMode();
-        }
+        }*/
        if(type.equals("White")){
             type = "Red";
+            bordertype = "Black";
         }else{
             type = "White";
+            bordertype = "Green";
         }
-         table.setStyle("-fx-background-color:" + type);
-        tableFio.setStyle("-fx-background-color:" + type);
-        tablePhone.setStyle("-fx-background-color:" + type);
-        background.setStyle("-fx-background-color:" + type);
-        sPane.setStyle("-fx-background-color:" + type);
+       table.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
+       tableFio.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
+       tablePhone.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
+       background.setStyle("-fx-background-color:" + type);
+       sPane.setStyle("-fx-background-color:" + type);
     }
     private void setLightMode(){
         sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
@@ -161,5 +167,16 @@ public class HelloController {
     private void delete(){
         unVisible();
         edit.setVisible(true);
+    }
+    Stage stage = new Stage();
+    @FXML
+    private void viewMasters() throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Schedule.fxml")));
+        stage.setTitle("Расписание мастеров");
+        stage.setScene(new Scene(root));
+        stage.show();
+        stage.setX((Stage.getWindows().get(0).getX()+Stage.getWindows().get(0).getWidth())-stage.getWidth());
+        stage.setY(Stage.getWindows().get(0).getY()+30);
+        Stage.getWindows().get(0).setOnHidden(event -> stage.close());
     }
 }
