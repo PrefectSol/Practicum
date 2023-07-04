@@ -1,74 +1,115 @@
 package com.mpm.demo;
-import javafx.application.Application;
-import javafx.fxml.FXML;
-import javafx.geometry.Insets;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 
-import static javafx.application.Application.launch;
+
+import javafx.fxml.FXML;
+
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
+
 
 public class Function {
-    public AnchorPane backgr;
-//радиобатн
-        public void start(Stage primaryStage) {
-            GridPane gridPane = new GridPane();
-            gridPane.setPadding(new Insets(10));
-            gridPane.setVgap(10);
-            gridPane.setHgap(10);
 
-// Создаем элменты управления
-            Label xLabel = new Label("X: ");
-            TextField xField = new TextField();
-            Label yLabel = new Label("Y: ");
-            TextField yField = new TextField();
-            Button calculateButton = new Button("Calculate");
-            Label resultLabel = new Label();
+    public ToggleGroup AngleFunctions;
+    public RadioButton cosRB;
+    public RadioButton sinRB;
+    public RadioButton thRB;
+    public RadioButton cthRB;
+    public Label angleValue;
+    public TextArea angleInput;
+    public RadioButton RBx3;
 
-// Добавляем элементы на панель
-            gridPane.add(xLabel, 0, 0);
-            gridPane.add(xField, 1, 0);
-            gridPane.add(yLabel, 0, 1);
-            gridPane.add(yField, 1, 1);
-            gridPane.add(calculateButton, 0, 2);
-            HBox hbox = new HBox(resultLabel);
-            gridPane.add(hbox, 0, 3, 2, 1);
+    public RadioButton RBx2;
 
-// Обработчик кнопки расчета
-            calculateButton.setOnAction(event -> {
-                try {
-                    double x = Double.parseDouble(xField.getText());
-                    double y = Double.parseDouble(yField.getText());
-                    double result = function(x, y); // Здесь вызываем функцию для расчета результата
-                    resultLabel.setText("Result: " + result);
-                } catch (NumberFormatException e) {
-                    resultLabel.setText("Invalid input");
-                }
-            });
-
-            Scene scene = new Scene(gridPane);
-            primaryStage.setScene(scene);
-            primaryStage.show();
-        }
-
-
-        // Здесь определяем функцию, которую нужно расчитать в точке (x, y)
-        private double function(double x, double y) {
-            return x * y + Math.sin(x) + Math.cos(y);
-        }
-
-        public static void main(String[] args) {
-            launch(args);
-        }
-
-    @FXML
-    public void initialize()
+    enum Func
     {
-        backgr.setStyle(HelloController.getStyle());
+        sin,
+        cos,
+        tg,
+        ctg,
+        x2,
+        x3
+    };
+
+   Function.Func activeFunction = Function.Func.cos;
+    @FXML
+    protected void onGetAngleClick()
+    {
+        Boolean isEmptyString = angleInput.getText().isEmpty();
+        if (isEmptyString)
+        {
+            angleValue.setText("Error");
+            return;
+        }
+
+        double angleInputValue;
+        try
+        {
+            angleInputValue = Double.parseDouble(angleInput.getText());
+        }
+        catch (Exception e)
+        {
+            angleValue.setText("Error");
+            return;
+        }
+
+
+
+        AngleFunctions.selectedToggleProperty().addListener((observable, oldValue, newValue) ->
+        {
+            if (newValue != null)
+            {
+                RadioButton selectedRadioButton = (RadioButton) newValue;
+                switch (selectedRadioButton.getId()) {
+                    case "cosRB":
+                        activeFunction = Function.Func.cos;
+                        break;
+                    case "sinRB":
+                        activeFunction = Function.Func.sin;
+                        break;
+                    case "thRB":
+                        activeFunction = Function.Func.tg;
+                        break;
+                    case "cthRB":
+                        activeFunction = Function.Func.ctg;
+                        break;
+                    case "RBx3":
+                        activeFunction = Function.Func.x3;
+                        break;case "RBx2":
+                        activeFunction = Function.Func.x2;
+                        break;
+                }
+            }
+        });
+
+        String result = "Error";
+
+        if (activeFunction == Function.Func.cos)
+        {
+            result = Double.toString(Math.cos(angleInputValue *= Math.PI / 180.0));
+        }
+        else if (activeFunction == Function.Func.sin)
+        {
+            result = Double.toString(Math.sin(angleInputValue *= Math.PI / 180.0));
+        }
+        else if (activeFunction == Function.Func.tg)
+        {
+            result = Double.toString(Math.tan(angleInputValue *= Math.PI / 180.0));
+        }
+        else if (activeFunction == Function.Func.x3)
+        {
+            result = Double.toString(Math.pow(angleInputValue,3));
+        } else if (activeFunction == Function.Func.x2)
+        {
+            result = Double.toString(Math.pow(angleInputValue,2));
+        }
+        else
+        {
+            result = Double.toString(1.0 / Math.tan(angleInputValue));
+        }
+
+        angleValue.setText(result);
     }
-    }
+}
