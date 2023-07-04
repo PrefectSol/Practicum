@@ -121,7 +121,7 @@ public class HelloController {
         String a = value2.getText();
         String b = value1.getText();
         try {
-            if (a.matches("\\d{11}") && b.matches("[A-Za-z]+")) {
+            if (a.matches("\\d{11}") && b.matches("[A-Za-zА-Яа-я]+")) {
                 Person user = new Person(a, b);
                 personData.add(user);
                 table.setItems(personData);
