@@ -8,8 +8,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -19,9 +17,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.io.IOException;
-import java.util.ArrayList;
+import java.io.*;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 public class HelloController {
     private String type = "";
@@ -97,6 +95,25 @@ public class HelloController {
     private ObservableList<Person> personData = FXCollections.observableArrayList();
     @FXML
     private void initialize() {
+        File file = new File("items.txt");
+        try {
+            file.createNewFile();
+            BufferedReader br = new BufferedReader(new FileReader("items.txt"));
+            boolean what = true;
+            while(what){
+                String value1 = br.readLine();
+                if(value1 == null){
+                    what = false;
+                }
+                String value2 = br.readLine();
+                Person user = new Person(value2, value1);
+                personData.add(user);
+                table.setItems(personData);
+            }
+            br.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         unVisible();
         table.setVisible(true);
         tableFio.setCellValueFactory(new PropertyValueFactory<>("phone"));
@@ -134,10 +151,18 @@ public class HelloController {
                 otmena();
                 addDelForm();
                 search();
+                PrintWriter pw = new PrintWriter("items.txt");
+                for(int i = 0; i < personData.size(); i++){
+                    pw.println(personData.get(i).getPhone());
+                    pw.println(personData.get(i).getFio());
+                }
+                pw.close();
             } else {
                 throw new IllegalArgumentException();
             }
         } catch (IllegalArgumentException e) {
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
     private void addDelForm(){

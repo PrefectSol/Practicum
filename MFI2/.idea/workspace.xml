@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="Исключения для фио и телефона">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -137,14 +142,7 @@
       <option name="project" value="LOCAL" />
       <updated>1688416549878</updated>
     </task>
-    <task id="LOCAL-00011" summary="Information">
-      <created>1688452920684</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1688452920684</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
