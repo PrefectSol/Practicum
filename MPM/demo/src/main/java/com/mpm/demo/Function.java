@@ -22,6 +22,7 @@ public class Function {
     public RadioButton RBx3;
 
     public RadioButton RBx2;
+    public AnchorPane backgr;
 
     enum Func
     {
@@ -34,7 +35,12 @@ public class Function {
     };
 
    Function.Func activeFunction = Function.Func.cos;
-    @FXML
+   @FXML
+    public void initialize()
+    {
+        backgr.setStyle(HelloController.getStyle());
+    }
+   @FXML
     protected void onGetAngleClick()
     {
         Boolean isEmptyString = angleInput.getText().isEmpty();

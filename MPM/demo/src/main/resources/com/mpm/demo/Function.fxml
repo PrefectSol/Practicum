@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="336.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.Function">
+<AnchorPane fx:id="backgr" prefHeight="336.0" prefWidth="430.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mpm.demo.Function">
    <children>
       <RadioButton fx:id="cthRB" layoutX="-1.0" layoutY="111.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="156.0" text="Ctg(a)" AnchorPane.leftAnchor="0.0">
          <toggleGroup>
