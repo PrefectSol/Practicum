@@ -182,7 +182,6 @@ public class HelloController {
         gp.getChildren().clear();
         for (int i = 0, d, j = 0; i < personData.size(); i++) {
             gp.getRowConstraints().add(new RowConstraints(30));
-            gp.setGridLinesVisible(true);
             d = 0;
             Label text = new Label(personData.get(i).getFio());
             gp.add(text, d, j);
