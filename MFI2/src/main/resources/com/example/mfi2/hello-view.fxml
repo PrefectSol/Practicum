@@ -37,12 +37,12 @@
             <Button fx:id="theme" mnemonicParsing="false" onAction="#switchTheme" text="Тема" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="11.0" />
             <TextField fx:id="filterField" layoutX="197.0" layoutY="7.0" minWidth="94.0" prefHeight="31.0" prefWidth="94.0" promptText="Поиск:" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="7.0" />
             <Button layoutX="453.0" layoutY="11.0" mnemonicParsing="false" onAction="#viewMasters" text="Мастера" AnchorPane.rightAnchor="72.0" />
-                  <Button layoutX="549.0" layoutY="12.0" mnemonicParsing="false" onAction="#detailMode" text="Детали Клиента" />
+                  <Button layoutX="549.0" layoutY="12.0" mnemonicParsing="false" text="Детали Клиента" />
           </children>
         </AnchorPane>
         <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
           <children>
-            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: turquoise;" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: turquoise;" translateY="1.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="tableFio" prefWidth="300.0" text="Ф.И.О" />
                 <TableColumn fx:id="tablePhone" prefWidth="300.0" styleClass="table-cell" text="Телефон" />
@@ -51,7 +51,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
               </columnResizePolicy>
             </TableView>
-            <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
                 <Group AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="244.20000000000005" AnchorPane.topAnchor="111.0">
                   <children>
@@ -209,7 +209,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Button layoutX="277.0" layoutY="314.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #DCDCDC; -fx-border-color: #808080; -fx-background-radius: 10; -fx-border-radius: 10;" text="Закрыть" textFill="GREY">
+            <Button layoutX="277.0" layoutY="314.0" mnemonicParsing="false" style="-fx-background-color: #DCDCDC; -fx-border-color: #808080; -fx-background-radius: 10; -fx-border-radius: 10;" text="Закрыть" textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="37.0" />
                </font>
