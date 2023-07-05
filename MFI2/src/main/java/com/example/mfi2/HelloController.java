@@ -23,7 +23,9 @@ import java.util.Objects;
 
 public class HelloController {
     private String type = "";
-    private String bordertype = "";
+    private int theme = 0;
+    private String bordertype = "DarkGray";
+    private String selection = "";
     @FXML
     private AnchorPane background;
     @FXML
@@ -59,41 +61,22 @@ public class HelloController {
         table.setVisible(true);
     }
 
-    private boolean isLightMode = true;
-
     @FXML
     public void switchTheme(ActionEvent event) {
-      /*isLightMode = !isLightMode;
-        if (isLightMode){
-            setLightMode();
-        }
-        else {
-            setDarkMode();
-        }*/
-        if (type.equals("White")) {
-            type = "Red";
-            bordertype = "Black";
-        } else {
+        if (theme == 0) {
+            type = "DimGray";
+            selection = "DimGray";
+            theme += 1;
+        } else if(theme == 1) {
             type = "White";
-            bordertype = "Green";
+            selection = "DarkGray";
+            theme -= 1;
         }
-        table.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
-        tableFio.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
-        tablePhone.setStyle("-fx-background-color:" + type + ";-fx-border-color:" + bordertype);
+        table.setStyle("-fx-background-color:" + type + "; -fx-border-color:" + bordertype +
+                "; -fx-selection-bar:" + selection + "; -fx-selection-bar-non-focused:" + selection);
         background.setStyle("-fx-background-color:" + type);
         sPane.setStyle("-fx-background-color:" + type);
     }
-
-    private void setLightMode() {
-        sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
-        sPane.getStylesheets().add((Objects.requireNonNull(getClass().getResource("styles/LightMode.css"))).toExternalForm());
-    }
-
-    private void setDarkMode() {
-        sPane.getStylesheets().remove((Objects.requireNonNull(getClass().getResource("styles/LightMode.css"))).toExternalForm());
-        sPane.getStylesheets().add((Objects.requireNonNull(getClass().getResource("styles/DarkMode.css"))).toExternalForm());
-    }
-
     protected void unVisible() {
         table.setVisible(false);
         addForm.setVisible(false);

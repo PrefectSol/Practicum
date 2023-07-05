@@ -7,7 +7,7 @@
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mfi2.HelloController">
   <children>
-    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../java/styles/LightMode.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
         <AnchorPane maxHeight="40.0" SplitPane.resizableWithParent="false">
           <children>
@@ -39,7 +39,7 @@
         </AnchorPane>
         <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
           <children>
-            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" stylesheets="@../../../../java/styles/LightMode.css" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="tableFio" prefWidth="300.0" text="Ф.И.О" />
                 <TableColumn fx:id="tablePhone" prefWidth="300.0" styleClass="table-cell" text="Телефон" />
