@@ -212,6 +212,7 @@ public class HelloController {
                 public void handle(MouseEvent mouseEvent) {
                     personData.remove(Integer.parseInt(String.valueOf(button.getId())));
                     addDelForm();
+                    addDedForm();
                     printToFile();
                 }
             });
@@ -241,8 +242,6 @@ public class HelloController {
                     nsmEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getFio());
                     serviceEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService());
                     telephoneEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getPhone());
-                    //personData.remove(Integer.parseInt(String.valueOf(button.getId())));
-                    addDelForm();
                     addDedForm();
                     printToFile();
                 }

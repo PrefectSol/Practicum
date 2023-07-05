@@ -37,7 +37,7 @@
             <Button fx:id="theme" mnemonicParsing="false" onAction="#switchTheme" text="Тема" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="11.0" />
             <TextField fx:id="filterField" layoutX="197.0" layoutY="7.0" minWidth="94.0" prefHeight="31.0" prefWidth="94.0" promptText="Поиск:" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="307.0" AnchorPane.topAnchor="7.0" />
             <Button layoutX="453.0" layoutY="11.0" mnemonicParsing="false" onAction="#viewMasters" text="Мастера" AnchorPane.rightAnchor="72.0" />
-                  <Button layoutX="549.0" layoutY="12.0" mnemonicParsing="false" onAction="#detailsClient" text="Детали Клиента" />
+                  <Button layoutX="549.0" layoutY="12.0" mnemonicParsing="false" onAction="#detailsClient" text="Детали Клиента" AnchorPane.rightAnchor="147.00000000000006" />
           </children>
         </AnchorPane>
         <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
@@ -94,7 +94,7 @@
                         <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" AnchorPane.rightAnchor="0.0" />
               </children>
             </AnchorPane>
-                  <AnchorPane fx:id="edit1" layoutX="1.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="798.0" visible="false">
+                  <AnchorPane fx:id="edit1" layoutX="1.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="798.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <ScrollPane layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
@@ -109,6 +109,7 @@
                               </GridPane>
                            </content>
                         </ScrollPane>
+                        <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" AnchorPane.rightAnchor="0.0" />
                      </children>
                   </AnchorPane>
           </children>
@@ -117,7 +118,7 @@
     </SplitPane>
       <AnchorPane fx:id="sEdit" prefHeight="400.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="108.0" prefWidth="800.0" style="-fx-background-color: #80808080;" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane prefHeight="108.0" prefWidth="800.0" style="-fx-background-color: #80808080;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
                   <Label layoutX="236.0" layoutY="29.0" prefHeight="51.0" prefWidth="328.0" text="Детали клиента" textFill="WHITE">
                      <font>
@@ -129,7 +130,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="64.0" layoutY="118.0" prefHeight="51.0" prefWidth="103.0" text="ФИО: " textFill="GREY" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="633.0" AnchorPane.topAnchor="118.0">
+            <Label layoutX="64.0" layoutY="118.0" prefHeight="51.0" prefWidth="103.0" text="ФИО: " textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -137,7 +138,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="priceEd" layoutX="167.0" layoutY="290.0" prefHeight="51.0" prefWidth="103.0" text="..." textFill="GREY" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="530.0" AnchorPane.topAnchor="290.0">
+            <Label fx:id="priceEd" layoutX="167.0" layoutY="290.0" prefHeight="51.0" prefWidth="103.0" text="..." textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -145,7 +146,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="46.0" layoutY="226.0" prefHeight="51.0" prefWidth="103.0" text="Услуга:" textFill="GREY" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="46.0" AnchorPane.rightAnchor="651.0" AnchorPane.topAnchor="226.0">
+            <Label layoutX="46.0" layoutY="226.0" prefHeight="51.0" prefWidth="103.0" text="Услуга:" textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -153,7 +154,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="nsmEd" layoutX="167.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY" AnchorPane.bottomAnchor="231.0" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="118.0">
+            <Label fx:id="nsmEd" layoutX="167.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -161,7 +162,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="55.0" layoutY="290.0" prefHeight="51.0" prefWidth="86.0" text="Цена: " textFill="GREY" AnchorPane.bottomAnchor="59.0" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="659.0" AnchorPane.topAnchor="290.0">
+            <Label layoutX="55.0" layoutY="290.0" prefHeight="51.0" prefWidth="86.0" text="Цена: " textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -169,7 +170,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="serviceEd" layoutX="167.0" layoutY="226.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="226.0">
+            <Label fx:id="serviceEd" layoutX="167.0" layoutY="226.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -177,7 +178,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="28.0" layoutY="169.0" prefHeight="51.0" prefWidth="139.0" text="Телефон:" textFill="GREY" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="633.0" AnchorPane.topAnchor="169.0">
+            <Label layoutX="28.0" layoutY="169.0" prefHeight="51.0" prefWidth="139.0" text="Телефон:" textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -185,7 +186,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="telephoneEd" layoutX="167.0" layoutY="169.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="169.0">
+            <Label fx:id="telephoneEd" layoutX="167.0" layoutY="169.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="30.0" />
                </font>
@@ -193,7 +194,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Button layoutX="525.0" layoutY="316.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #DCDCDC; -fx-border-color: #808080; -fx-background-radius: 10; -fx-border-radius: 10;" text="Закрыть" textFill="GREY" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="525.0" AnchorPane.rightAnchor="83.0" AnchorPane.topAnchor="316.0">
+            <Button layoutX="525.0" layoutY="316.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #DCDCDC; -fx-border-color: #808080; -fx-background-radius: 10; -fx-border-radius: 10;" text="Закрыть" textFill="GREY" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="189.0">
                <font>
                   <Font name="Myriad Web Pro Condensed" size="37.0" />
                </font>
