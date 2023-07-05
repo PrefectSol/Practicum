@@ -69,7 +69,7 @@ public class HelloController {
             theme += 1;
         } else if(theme == 1) {
             type = "White";
-            selection = "DarkGray";
+            selection = "DeepSkyBlue";
             theme -= 1;
         }
         table.setStyle("-fx-background-color:" + type + "; -fx-border-color:" + bordertype +
