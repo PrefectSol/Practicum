@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="Исключения для фио и телефона">
+    <list default="true" id="9d285ec0-fb10-4e17-85f1-c685807a583f" name="Changes" comment="Switch theme">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/styles/DarkMode.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/styles/LightMode.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" afterDir="false" />
@@ -30,7 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -146,7 +145,28 @@
       <option name="project" value="LOCAL" />
       <updated>1688416549878</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Switch theme">
+      <created>1688550632377</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688550632377</updated>
+    </task>
+    <task id="LOCAL-00012" summary="DetailsMode">
+      <created>1688576723744</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1688576723744</updated>
+    </task>
+    <task id="LOCAL-00013" summary="DetailsMode">
+      <created>1688576806221</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688576806221</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +189,8 @@
     <MESSAGE value="обновление таблицыы" />
     <MESSAGE value="поиск" />
     <MESSAGE value="Исключения для фио и телефона" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исключения для фио и телефона" />
+    <MESSAGE value="Switch theme" />
+    <MESSAGE value="DetailsMode" />
+    <option name="LAST_COMMIT_MESSAGE" value="DetailsMode" />
   </component>
 </project>
