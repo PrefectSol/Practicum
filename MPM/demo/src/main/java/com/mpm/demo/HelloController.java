@@ -13,9 +13,9 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 
+import java.awt.geom.Area;
 import java.io.IOException;
-public class HelloController
-{
+public class HelloController {
     public VBox VboxContainer;
     public ToggleGroup AngleFunctions;
     public RadioButton cosRB;
@@ -25,28 +25,39 @@ public class HelloController
     public Label angleValue;
     public TextField angleInput;
     private static String M_Style;
+    public TextField sideA;
+    public TextField sideB;
+    public Label resultLabel;
+    public RadioButton RBtrapezoid;
+    public RadioButton RBrectangle;
+    public TextField heightField;
 
     private IntegralMatcher matcher;
 
     private Function functionContr;
 
-    enum Func
-    {
+    private ToggleGroup toggleGroup;
+
+
+    enum Func {
         sin,
         cos,
         tg,
-        ctg
-    };
+        ctg,
+
+        areaR,
+        areaT
+    }
+
+    ;
 
     HelloController.Func activeFunction = HelloController.Func.cos;
 
     @FXML
-    protected void onFunctionClick()
-    {
+    protected void onFunctionClick() {
         if (functionContr != null)
             return;
-        try
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("Function.fxml"));
 
             Scene scene = new Scene(loader.load());
@@ -79,23 +90,18 @@ public class HelloController
     }
 
     @FXML
-    protected void onSwitchTheme()
-    {
+    protected void onSwitchTheme() {
         String style = VboxContainer.getStyle();
 
-        if (style.equals("-fx-background-color: #D9D9D9;"))
-        {
+        if (style.equals("-fx-background-color: #D9D9D9;")) {
             M_Style = "-fx-background-color: white;";
             VboxContainer.setStyle(M_Style);
-        }
-        else
-        {
+        } else {
             M_Style = "-fx-background-color: #D9D9D9;";
             VboxContainer.setStyle(M_Style);
         }
 
-        if (matcher != null)
-        {
+        if (matcher != null) {
             matcher.initialize();
         }
         if (functionContr != null)
@@ -104,15 +110,12 @@ public class HelloController
     }
 
     @FXML
-    protected void onIntegralClick()
-    {
-        if (matcher != null)
-        {
+    protected void onIntegralClick() {
+        if (matcher != null) {
             return;
         }
 
-        try
-        {
+        try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("IntegralMatcher.fxml"));
 
             Scene scene = new Scene(loader.load());
@@ -140,36 +143,28 @@ public class HelloController
                 matcher = null;
             });
 
-        }
-        catch (IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
 
-    public static String getStyle()
-    {
+    public static String getStyle() {
         return M_Style;
     }
 
     @FXML
-    protected void onGetAngleClick()
-    {
+    protected void onGetAngleClick() {
         Boolean isEmptyString = angleInput.getText().isEmpty();
-        if (isEmptyString)
-        {
+        if (isEmptyString) {
             angleValue.setText("Значение: Error");
             return;
         }
 
         double angleInputValue;
-        try
-        {
+        try {
             angleInputValue = Double.parseDouble(angleInput.getText());
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             angleValue.setText("Значение: Error");
             return;
         }
@@ -178,8 +173,7 @@ public class HelloController
 
         AngleFunctions.selectedToggleProperty().addListener((observable, oldValue, newValue) ->
         {
-            if (newValue != null)
-            {
+            if (newValue != null) {
                 RadioButton selectedRadioButton = (RadioButton) newValue;
                 switch (selectedRadioButton.getId()) {
                     case "cosRB":
@@ -200,23 +194,43 @@ public class HelloController
 
         String result = "Error";
 
-        if (activeFunction == Func.cos)
-        {
+        if (activeFunction == Func.cos) {
             result = Double.toString(Math.cos(angleInputValue));
-        }
-        else if (activeFunction == Func.sin)
-        {
+        } else if (activeFunction == Func.sin) {
             result = Double.toString(Math.sin(angleInputValue));
-        }
-        else if (activeFunction == Func.tg)
-        {
+        } else if (activeFunction == Func.tg) {
             result = Double.toString(Math.tan(angleInputValue));
-        }
-        else
-        {
+        } else {
             result = Double.toString(1.0 / Math.tan(angleInputValue));
         }
 
         angleValue.setText("Значение: " + result);
+    }
+
+    @FXML
+    private void initialize() {
+        toggleGroup = new ToggleGroup();
+        RBrectangle.setToggleGroup(toggleGroup);
+        RBtrapezoid.setToggleGroup(toggleGroup);
+        RBrectangle.setSelected(true);
+    }
+
+    @FXML
+    private void onCalculateRectangleArea() {
+        try {
+            double length = Double.parseDouble(sideA.getText());
+            double width = Double.parseDouble(sideB.getText());
+
+            if (RBrectangle.isSelected()) {
+                double area = length * width;
+                resultLabel.setText("Площадь прямоугольника: " + area);
+            } else if (RBtrapezoid.isSelected()) {
+                double height = Double.parseDouble(heightField.getText());
+                double area = (length + width) * height / 2;
+                resultLabel.setText("Площадь трапеции: " + area);
+            }
+        } catch (NumberFormatException e) {
+            resultLabel.setText("Некорректные значения длины, ширины или высоты");
+        }
     }
 }
