@@ -57,6 +57,14 @@ public class HelloController {
     @FXML
     private ComboBox service;
     @FXML
+    private Label nsmEd;
+    @FXML
+    private Label serviceEd;
+    @FXML
+    private Label telephoneEd;
+    @FXML
+    private Label priceEd;
+    @FXML
     protected void clickAdd() {
         unVisible();
         addForm.setVisible(true);
@@ -230,6 +238,9 @@ public class HelloController {
                 public void handle(MouseEvent mouseEvent) {
                     sEdit.setVisible(true);
                     sPane.setVisible(false);
+                    nsmEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getFio());
+                    serviceEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService());
+                    telephoneEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getPhone());
                     //personData.remove(Integer.parseInt(String.valueOf(button.getId())));
                     addDelForm();
                     addDedForm();
