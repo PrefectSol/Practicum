@@ -39,7 +39,7 @@
         </AnchorPane>
         <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
           <children>
-            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: turquoise;" translateY="1.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="tableFio" prefWidth="300.0" text="Ф.И.О" />
                 <TableColumn fx:id="tablePhone" prefWidth="300.0" styleClass="table-cell" text="Телефон" />
@@ -50,16 +50,15 @@
             </TableView>
             <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
-                <Group AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="244.20000000000005" AnchorPane.topAnchor="111.0">
+                <Group AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="244.20000000000005" AnchorPane.topAnchor="107.0">
                   <children>
                     <HBox alignment="CENTER" spacing="5.0">
                       <children>
                         <TextField fx:id="value1" promptText="ФИО" />
                         <TextField fx:id="value2" promptText="Телефон" />
-                                    <ComboBox fx:id="service" prefWidth="150.0" />
                       </children>
                     </HBox>
-                    <ButtonBar layoutX="123.0" layoutY="40.0" prefHeight="40.0" prefWidth="170.0">
+                    <ButtonBar layoutX="42.79998779296875" layoutY="37.0" prefHeight="40.0" prefWidth="170.0">
                       <buttons>
                         <HBox spacing="5.0">
                           <children>
@@ -73,11 +72,11 @@
                 </Group>
               </children>
             </AnchorPane>
-            <AnchorPane fx:id="edit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="edit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
                 <ScrollPane layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                   <content>
-                    <GridPane fx:id="gp" alignment="CENTER_LEFT" maxWidth="-Infinity" style="-fx-background-color: red;">
+                    <GridPane fx:id="gp" alignment="CENTER_LEFT" gridLinesVisible="true" maxWidth="-Infinity">
                       <columnConstraints>
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -88,7 +87,6 @@
                     </GridPane>
                   </content>
                 </ScrollPane>
-                        <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" AnchorPane.rightAnchor="0.0" />
               </children>
             </AnchorPane>
           </children>
