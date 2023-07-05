@@ -48,8 +48,6 @@ public class HelloController {
     private GridPane gp;
     @FXML
     private AnchorPane edit;
-    @FXML
-    private ComboBox service;
 
     @FXML
     protected void clickAdd() {
@@ -89,8 +87,6 @@ public class HelloController {
 
     @FXML
     private void initialize() {
-        service.setValue("Услуга 1");
-        service.getItems().addAll("Услуга 1", "Услуга 2", "Услуга 3");
         File file = new File("items.txt");
         try {
             if (file.exists()) {
@@ -102,8 +98,7 @@ public class HelloController {
                         what = false;
                     } else {
                         String value2 = br.readLine();
-                        String value3 = br.readLine();
-                        Person user = new Person(value2, value1, value3);
+                        Person user = new Person(value2, value1);
                         personData.add(user);
                         table.setItems(personData);
                     }
@@ -149,8 +144,9 @@ public class HelloController {
         String b = value1.getText();
         try {
             if (a.matches("8\\d{10}") && b.matches("[A-Za-zА-Яа-я ]+") && !b.equals(" ") && !b.matches(" [A-Za-zА-Яа-я ]+") || !b.matches(" [A-Za-zА-Яа-я ]+") && !b.equals(" ") && a.matches("[+]7\\d{10}") && b.matches("[A-Za-zА-Яа-я]+")) {
-                Person person = new Person(a, b, String.valueOf(service.getValue()));
-                personData.add(person);
+                Person user = new Person(a, b);
+                personData.add(user);
+
                 table.setItems(personData);
                 otmena();
                 addDelForm();
@@ -169,7 +165,6 @@ public class HelloController {
             for (int i = 0; i < personData.size(); i++) {
                 pw.println(personData.get(i).getPhone());
                 pw.println(personData.get(i).getFio());
-                pw.println(personData.get(i).getService());
             }
             pw.close();
         } catch (FileNotFoundException e) {
@@ -182,6 +177,7 @@ public class HelloController {
         gp.getChildren().clear();
         for (int i = 0, d, j = 0; i < personData.size(); i++) {
             gp.getRowConstraints().add(new RowConstraints(30));
+            gp.setGridLinesVisible(true);
             d = 0;
             Label text = new Label(personData.get(i).getFio());
             gp.add(text, d, j);
