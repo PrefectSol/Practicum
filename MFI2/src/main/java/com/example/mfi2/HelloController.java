@@ -29,6 +29,8 @@ public class HelloController {
     @FXML
     private AnchorPane background;
     @FXML
+    private AnchorPane sEdit;
+    @FXML
     private SplitPane sPane;
     @FXML
     private TextField filterField;
@@ -50,6 +52,8 @@ public class HelloController {
     private GridPane gp1;
     @FXML
     private AnchorPane edit;
+    @FXML
+    private AnchorPane edit1;
     @FXML
     private ComboBox service;
     @FXML
@@ -84,6 +88,7 @@ public class HelloController {
         table.setVisible(false);
         addForm.setVisible(false);
         edit.setVisible(false);
+        edit1.setVisible(false);
     }
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
@@ -109,6 +114,7 @@ public class HelloController {
                         table.setItems(personData);
                     }
                 }
+                addDedForm();
                 addDelForm();
                 br.close();
             } else {
@@ -154,6 +160,7 @@ public class HelloController {
                 personData.add(person);
                 table.setItems(personData);
                 otmena();
+                addDedForm();
                 addDelForm();
                 search();
                 printToFile();
@@ -216,13 +223,16 @@ public class HelloController {
             text = new Label(personData.get(i).getPhone());
             gp1.add(text, d, j);
             d++;
-            Button button = new Button("Delete");
+            Button button = new Button("Details");
             button.setId(String.valueOf(j));
             button.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    personData.remove(Integer.parseInt(String.valueOf(button.getId())));
+                    sEdit.setVisible(true);
+                    sPane.setVisible(false);
+                    //personData.remove(Integer.parseInt(String.valueOf(button.getId())));
                     addDelForm();
+                    addDedForm();
                     printToFile();
                 }
             });
@@ -236,6 +246,17 @@ public class HelloController {
         unVisible();
         edit.setVisible(true);
     }
+    @FXML
+    private void detailsClient(){
+        unVisible();
+        edit1.setVisible(true);
+    }
+    @FXML
+    private void exit() {
+        sEdit.setVisible(false);
+        sPane.setVisible(true);
+    }
+
 
     Stage stage = new Stage();
 
