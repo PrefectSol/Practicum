@@ -65,6 +65,8 @@ public class HelloController {
     @FXML
     private Label priceEd;
     @FXML
+    private AnchorPane anchorPane;
+    @FXML
     protected void clickAdd() {
         unVisible();
         addForm.setVisible(true);
@@ -77,20 +79,31 @@ public class HelloController {
     }
 
     @FXML
-    public void switchTheme(ActionEvent event) {
+    public void switchTheme() {
         if (theme == 0) {
             type = "DimGray";
             selection = "DimGray";
+            if (table.isVisible()){
+                anchorPane.setStyle("-fx-background-color:DimGray");
+            }
+            else {
+                sPane.setStyle("-fx-background-color:DimGray");
+            }
             theme += 1;
         } else if(theme == 1) {
             type = "White";
             selection = "DeepSkyBlue";
+            if (table.isVisible()){
+                anchorPane.setStyle("-fx-background-color:White");
+            }
+            else {
+                sPane.setStyle("-fx-background-color:White");
+            }
             theme -= 1;
         }
         table.setStyle("-fx-background-color:" + type + "; -fx-border-color:" + bordertype +
-                "; -fx-selection-bar:" + selection + "; -fx-selection-bar-non-focused:" + selection);
+               "; -fx-selection-bar:" + selection + "; -fx-selection-bar-non-focused:" + selection);
         background.setStyle("-fx-background-color:" + type);
-        sPane.setStyle("-fx-background-color:" + type);
     }
     protected void unVisible() {
         table.setVisible(false);
@@ -254,6 +267,12 @@ public class HelloController {
     @FXML
     private void delete() {
         unVisible();
+        if (theme == 0){
+            sPane.setStyle("-fx-background: White");
+        }
+        else {
+            sPane.setStyle("-fx-background: DimGray");
+        }
         edit.setVisible(true);
     }
     @FXML

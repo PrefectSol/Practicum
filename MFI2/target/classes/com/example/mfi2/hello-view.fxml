@@ -11,7 +11,7 @@
   <children>
     <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
-        <AnchorPane maxHeight="40.0" SplitPane.resizableWithParent="false">
+        <AnchorPane fx:id="anchorPane" maxHeight="40.0" SplitPane.resizableWithParent="false">
           <children>
             <ButtonBar prefHeight="40.0" prefWidth="170.0" AnchorPane.leftAnchor="4.0" AnchorPane.topAnchor="4.0">
               <buttons>
@@ -42,7 +42,7 @@
         </AnchorPane>
         <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
           <children>
-            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: turquoise;" translateY="1.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: deepskyblue;" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="tableFio" prefWidth="300.0" text="Ф.И.О" />
                 <TableColumn fx:id="tablePhone" prefWidth="300.0" styleClass="table-cell" text="Телефон" />
@@ -51,7 +51,7 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
               </columnResizePolicy>
             </TableView>
-            <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
                 <Group AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="179.0" AnchorPane.rightAnchor="244.20000000000005" AnchorPane.topAnchor="111.0">
                   <children>
@@ -96,7 +96,7 @@
             </AnchorPane>
                   <AnchorPane fx:id="edit1" layoutX="1.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="348.0" prefWidth="798.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <ScrollPane layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <ScrollPane fx:id="scrollPane" layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <content>
                               <GridPane fx:id="gp1" alignment="CENTER_LEFT" gridLinesVisible="true" maxWidth="-Infinity">
                                  <columnConstraints>
