@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mfi2.HelloController">
   <children>
-    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../java/styles/LightMode.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
         <AnchorPane maxHeight="40.0" SplitPane.resizableWithParent="false">
           <children>
@@ -36,9 +37,9 @@
             <Button layoutX="453.0" layoutY="11.0" mnemonicParsing="false" onAction="#viewMasters" text="Мастера" AnchorPane.rightAnchor="72.0" />
           </children>
         </AnchorPane>
-        <AnchorPane SplitPane.resizableWithParent="false">
+        <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" SplitPane.resizableWithParent="false">
           <children>
-            <TableView fx:id="table" maxHeight="1.7976931348623157E308" stylesheets="@../../../../java/styles/LightMode.css" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TableColumn fx:id="tableFio" prefWidth="300.0" text="Ф.И.О" />
                 <TableColumn fx:id="tablePhone" prefWidth="300.0" styleClass="table-cell" text="Телефон" />
@@ -49,35 +50,43 @@
             </TableView>
             <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
-                <HBox fillHeight="false" spacing="5.0" AnchorPane.bottomAnchor="172.4" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.00000000000006" AnchorPane.topAnchor="150.0">
+                <Group AnchorPane.bottomAnchor="164.0" AnchorPane.leftAnchor="251.0" AnchorPane.rightAnchor="244.20000000000005" AnchorPane.topAnchor="107.0">
                   <children>
-                    <TextField fx:id="value1" promptText="ФИО" />
-                    <TextField fx:id="value2" promptText="Телефон" />
-                    <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <HBox alignment="CENTER" spacing="5.0">
+                      <children>
+                        <TextField fx:id="value1" promptText="ФИО" />
+                        <TextField fx:id="value2" promptText="Телефон" />
+                      </children>
+                    </HBox>
+                    <ButtonBar layoutX="42.79998779296875" layoutY="37.0" prefHeight="40.0" prefWidth="170.0">
                       <buttons>
-                        <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
-                        <Button layoutX="30.0" layoutY="17.0" mnemonicParsing="false" onAction="#otmena" text="Отмена" />
+                        <HBox spacing="5.0">
+                          <children>
+                            <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
+                            <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" />
+                          </children>
+                        </HBox>
                       </buttons>
                     </ButtonBar>
                   </children>
-                </HBox>
+                </Group>
               </children>
             </AnchorPane>
-            <AnchorPane fx:id="edit" prefHeight="348.0" prefWidth="599.2" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="edit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <children>
-                <GridPane fx:id="gp" gridLinesVisible="true" prefHeight="26.0" prefWidth="599.0" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                  <columnConstraints>
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  </columnConstraints>
-                  <rowConstraints>
-                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                  </rowConstraints>
-                  <children>
-                    <Label text="Телефон" />
-                    <Label text="ФИО" GridPane.columnIndex="1" />
-                  </children>
-                </GridPane>
+                <ScrollPane layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <content>
+                    <GridPane fx:id="gp" alignment="CENTER_LEFT" gridLinesVisible="true" maxWidth="-Infinity">
+                      <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      </columnConstraints>
+                      <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      </rowConstraints>
+                    </GridPane>
+                  </content>
+                </ScrollPane>
               </children>
             </AnchorPane>
           </children>
