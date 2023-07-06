@@ -230,7 +230,7 @@ public class HelloController {
                 resultLabel.setText("Площадь трапеции: " + area);
             }
         } catch (NumberFormatException e) {
-            resultLabel.setText("Некорректные значения длины, ширины или высоты");
+            resultLabel.setText("Error");
         }
     }
 }

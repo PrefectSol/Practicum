@@ -81,11 +81,11 @@
       <RadioButton fx:id="RBtrapezoid" layoutX="308.0" layoutY="157.0" mnemonicParsing="false" text="Трапеция" />
       <RadioButton fx:id="RBrectangle" layoutX="308.0" layoutY="131.0" mnemonicParsing="false" text="Прямоугольник" />
       <Label fx:id="resultLabel" layoutX="325.0" layoutY="228.0" />
-      <Label layoutX="302.0" layoutY="285.0" text="A" />
-      <Label layoutX="302.0" layoutY="325.0" text="B" />
-      <Label layoutX="302.0" layoutY="367.0" text="h" />
-      <TextField fx:id="heightField" layoutX="355.0" layoutY="362.0" />
-      <TextField fx:id="sideA" layoutX="355.0" layoutY="280.0" AnchorPane.bottomAnchor="149.0" />
-      <TextField fx:id="sideB" layoutX="355.0" layoutY="320.0" AnchorPane.rightAnchor="61.5" />
+      <Label layoutX="302.0" layoutY="285.0" text="Длинна" />
+      <Label layoutX="302.0" layoutY="325.0" text="Ширина " />
+      <Label layoutX="302.0" layoutY="367.0" text="Высота" />
+      <TextField fx:id="heightField" layoutX="402.0" layoutY="363.0" />
+      <TextField fx:id="sideA" layoutX="402.0" layoutY="281.0" AnchorPane.bottomAnchor="148.0" />
+      <TextField fx:id="sideB" layoutX="402.0" layoutY="321.0" AnchorPane.rightAnchor="14.5" />
    </AnchorPane>
 </VBox>
