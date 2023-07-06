@@ -16,6 +16,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Телефонный справочник");
         stage.setScene(new Scene(root));
         stage.show();
+        stage.setResizable(false);
     }
 
     public static void main(String[] args) {

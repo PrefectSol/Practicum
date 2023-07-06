@@ -40,8 +40,6 @@
                   <Button layoutX="549.0" layoutY="12.0" mnemonicParsing="false" onAction="#detailsClient" text="Детали Клиента" AnchorPane.rightAnchor="147.00000000000006" />
           </children>
         </AnchorPane>
-            <StackPane prefHeight="150.0" prefWidth="200.0">
-               <children>
               <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0">
                 <children>
                   <TableView fx:id="table" maxHeight="1.7976931348623157E308" prefHeight="348.0" prefWidth="799.0" style="-fx-selection-bar: deepskyblue; -fx-selection-bar-non-focused: deepskyblue;" translateY="1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -53,13 +51,33 @@
                       <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                     </columnResizePolicy>
                   </TableView>
-                        <StackPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="addForm" layoutY="-32.0" prefHeight="348.0" prefWidth="599.2">
+                    <children>
+                        <StackPane layoutX="1.0" layoutY="48.0" AnchorPane.topAnchor="66.0">
                            <children>
-                        <AnchorPane fx:id="addForm" prefHeight="348.0" prefWidth="599.2">
-                          <children>
-                                    <StackPane layoutX="299.0" layoutY="119.0">
-                                       <children>
-                                          <GridPane fx:id="gridPrice" gridLinesVisible="true" style="-fx-border-color: black;">
+                              <Group>
+                                 <children>
+                                <HBox alignment="CENTER" prefHeight="26.0" prefWidth="797.0" spacing="5.0">
+                                  <children>
+                                    <TextField fx:id="value1" promptText="ФИО" />
+                                    <TextField fx:id="value2" prefHeight="26.0" prefWidth="157.0" promptText="Телефон" />
+                                  </children>
+                                </HBox>
+                                          <HBox layoutX="72.0" layoutY="32.0" prefHeight="46.0" prefWidth="635.0">
+                                             <children>
+                                                <ComboBox fx:id="service" prefHeight="26.0" prefWidth="149.0" />
+                                                <ComboBox fx:id="service1" prefHeight="26.0" prefWidth="149.0" />
+                                                <ComboBox fx:id="service2" prefHeight="26.0" prefWidth="135.0" />
+                                                <ComboBox fx:id="master" layoutX="308.0" layoutY="10.0" prefHeight="26.0" prefWidth="160.0" />
+                                             </children>
+                                          </HBox>
+                              <HBox layoutX="322.0" layoutY="264.0" spacing="5.0">
+                                <children>
+                                  <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
+                                  <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" />
+                                </children>
+                              </HBox>
+                                          <GridPane fx:id="gridPrice" gridLinesVisible="true" layoutX="289.0" layoutY="78.0" style="-fx-border-color: black;">
                                             <columnConstraints>
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -84,37 +102,12 @@
                                                 <Label alignment="CENTER" layoutX="10.0" layoutY="106.0" prefHeight="47.0" prefWidth="136.0" text="Окрашивание" />
                                              </children>
                                           </GridPane>
-                                       </children>
-                                    </StackPane>
-                                    <StackPane layoutY="145.0" AnchorPane.bottomAnchor="268.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="145.0">
-                                       <children>
-                                  <Group />
-                                       </children>
-                                    </StackPane>
-                          <HBox alignment="CENTER" layoutX="1.0" layoutY="48.0" prefHeight="26.0" prefWidth="797.0" spacing="5.0">
-                            <children>
-                              <TextField fx:id="value1" promptText="ФИО" />
-                              <TextField fx:id="value2" prefHeight="26.0" prefWidth="157.0" promptText="Телефон" />
-                            </children>
-                          </HBox>
-                                    <HBox layoutX="73.0" layoutY="80.0" prefHeight="46.0" prefWidth="635.0">
-                                       <children>
-                                          <ComboBox fx:id="service" prefHeight="26.0" prefWidth="149.0" />
-                                          <ComboBox fx:id="service1" prefHeight="26.0" prefWidth="149.0" />
-                                          <ComboBox fx:id="service2" prefHeight="26.0" prefWidth="135.0" />
-                                          <ComboBox fx:id="master" layoutX="308.0" layoutY="10.0" prefHeight="26.0" prefWidth="160.0" />
-                                       </children>
-                                    </HBox>
-                        <HBox layoutX="323.0" layoutY="282.0" spacing="5.0">
-                          <children>
-                            <Button mnemonicParsing="false" onAction="#add" text="Добавить" />
-                            <Button mnemonicParsing="false" onAction="#otmena" text="Отмена" />
-                          </children>
-                        </HBox>
-                          </children>
-                        </AnchorPane>
+                                 </children>
+                              </Group>
                            </children>
                         </StackPane>
+                    </children>
+                  </AnchorPane>
                   <AnchorPane fx:id="edit" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="0.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <children>
                       <ScrollPane layoutX="-0.8999999761581421" layoutY="39.5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -153,8 +146,6 @@
                         </AnchorPane>
                 </children>
               </AnchorPane>
-               </children>
-            </StackPane>
       </items>
     </SplitPane>
       <AnchorPane fx:id="sEdit" prefHeight="400.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -258,5 +249,5 @@
             </Label>
          </children>
       </AnchorPane>
-  </children>
-</AnchorPane>
+         </children>
+    </AnchorPane>
