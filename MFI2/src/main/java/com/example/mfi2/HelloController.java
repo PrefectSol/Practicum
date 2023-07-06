@@ -57,6 +57,10 @@ public class HelloController {
     @FXML
     private ComboBox service;
     @FXML
+    private ComboBox service1;
+    @FXML
+    private ComboBox service2;
+    @FXML
     private Label nsmEd;
     @FXML
     private Label serviceEd;
@@ -83,22 +87,13 @@ public class HelloController {
         if (theme == 0) {
             type = "DimGray";
             selection = "DimGray";
-            if (table.isVisible()){
-                anchorPane.setStyle("-fx-background-color:DimGray");
-            }
-            else {
-                sPane.setStyle("-fx-background-color:DimGray");
-            }
+            sPane.setStyle("-fx-background: DimGray");
             theme += 1;
-        } else if(theme == 1) {
+        }
+        else if(theme == 1) {
             type = "White";
             selection = "DeepSkyBlue";
-            if (table.isVisible()){
-                anchorPane.setStyle("-fx-background-color:White");
-            }
-            else {
-                sPane.setStyle("-fx-background-color:White");
-            }
+            sPane.setStyle("-fx-background: White");
             theme -= 1;
         }
         table.setStyle("-fx-background-color:" + type + "; -fx-border-color:" + bordertype +
@@ -116,8 +111,12 @@ public class HelloController {
 
     @FXML
     private void initialize() {
-        service.setValue("Услуга 1");
-        service.getItems().addAll("Услуга 1", "Услуга 2", "Услуга 3");
+        service.setValue("Окрашивание");
+        service1.setValue("Нет услуги");
+        service2.setValue("Нет услуги");
+        service.getItems().addAll("Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
+        service1.getItems().addAll("Нет услуги", "Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
+        service2.getItems().addAll("Нет услуги", "Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
         File file = new File("items.txt");
         try {
             if (file.exists()) {
@@ -130,7 +129,9 @@ public class HelloController {
                     } else {
                         String value2 = br.readLine();
                         String value3 = br.readLine();
-                        Person user = new Person(value2, value1, value3);
+                        String value4 = br.readLine();
+                        String value5 = br.readLine();
+                        Person user = new Person(value2, value1, value3, value4, value5);
                         personData.add(user);
                         table.setItems(personData);
                     }
@@ -177,7 +178,7 @@ public class HelloController {
         String b = value1.getText();
         try {
             if (a.matches("8\\d{10}") && b.matches("[A-Za-zА-Яа-я ]+") && !b.equals(" ") && !b.matches(" [A-Za-zА-Яа-я ]+") || !b.matches(" [A-Za-zА-Яа-я ]+") && !b.equals(" ") && a.matches("[+]7\\d{10}") && b.matches("[A-Za-zА-Яа-я]+")) {
-                Person person = new Person(a, b, String.valueOf(service.getValue()));
+                Person person = new Person(a, b, String.valueOf(service.getValue()), String.valueOf(service1.getValue()), String.valueOf(service2.getValue()));
                 personData.add(person);
                 table.setItems(personData);
                 otmena();
@@ -199,6 +200,8 @@ public class HelloController {
                 pw.println(personData.get(i).getPhone());
                 pw.println(personData.get(i).getFio());
                 pw.println(personData.get(i).getService());
+                pw.println(personData.get(i).getService1());
+                pw.println(personData.get(i).getService2());
             }
             pw.close();
         } catch (FileNotFoundException e) {
@@ -267,12 +270,6 @@ public class HelloController {
     @FXML
     private void delete() {
         unVisible();
-        if (theme == 0){
-            sPane.setStyle("-fx-background: White");
-        }
-        else {
-            sPane.setStyle("-fx-background: DimGray");
-        }
         edit.setVisible(true);
     }
     @FXML
