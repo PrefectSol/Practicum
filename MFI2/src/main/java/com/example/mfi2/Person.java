@@ -10,8 +10,9 @@ public class Person {
     private int price1 = 0;
     private int price2 = 0;
     private int summPrice = 0;
+    private String master = "";
 
-    public Person(String fio, String phone, String service, String service1, String service2) {
+    public Person(String fio, String phone, String service, String service1, String service2, String master) {
         this.fio = fio;
         this.phone = phone;
         this.service = service;
@@ -62,6 +63,7 @@ public class Person {
         if (service2.equals("Пилинг")){
             price2 = 1500;
         }
+        this.master = master;
         summPrice = price + price1 + price2;
     }
     public String getFio(){return fio;}
@@ -69,9 +71,6 @@ public class Person {
     public String getService(){return service;}
     public String getService1(){return service1;}
     public String getService2(){return service2;}
+    public String getMaster(){return master;}
     public int getSummPrice(){return summPrice;}
-    public void setSummPrice(int summPrice){this.summPrice = summPrice;}
-    public void setFio(String fio){this.fio = fio;}
-    public void setPhone(String phone){this.phone = phone;}
-    public void setService(String service){this.service = service;}
 }

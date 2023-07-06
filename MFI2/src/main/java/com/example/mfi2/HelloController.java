@@ -69,7 +69,13 @@ public class HelloController {
     @FXML
     private Label priceEd;
     @FXML
+    private Label masterEd;
+    @FXML
     private Button close;
+    @FXML
+    private ComboBox master;
+    @FXML
+    private GridPane gridPrice;
     @FXML
     protected void clickAdd() {
         unVisible();
@@ -101,6 +107,7 @@ public class HelloController {
         background.setStyle("-fx-background-color:" + type);
         sEdit.setStyle("-fx-background-color:" + type);
         close.setStyle("-fx-background-color: LightGray");
+        gridPrice.setStyle("-fx-background-color:" + type);
     }
     protected void unVisible() {
         table.setVisible(false);
@@ -116,9 +123,11 @@ public class HelloController {
         service.setValue("Окрашивание");
         service1.setValue("Нет услуги");
         service2.setValue("Нет услуги");
+        master.setValue("Джабраилов А.Р");
         service.getItems().addAll("Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
         service1.getItems().addAll("Нет услуги", "Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
         service2.getItems().addAll("Нет услуги", "Окрашивание", "Стрижка", "Макияж", "Инъекция", "Пилинг");
+        master.getItems().addAll("Джабраилов А.Р.", "Джамал А.Б.", "Огузок А.Л.");
         File file = new File("items.txt");
         try {
             if (file.exists()) {
@@ -133,7 +142,8 @@ public class HelloController {
                         String value3 = br.readLine();
                         String value4 = br.readLine();
                         String value5 = br.readLine();
-                        Person user = new Person(value2, value1, value3, value4, value5);
+                        String value6 = br.readLine();
+                        Person user = new Person(value2, value1, value3, value4, value5, value6);
                         personData.add(user);
                         table.setItems(personData);
                     }
@@ -179,8 +189,9 @@ public class HelloController {
         String a = value2.getText();
         String b = value1.getText();
         try {
-            if (a.matches("8\\d{10}") && b.matches("[A-Za-zА-Яа-я ]+") && !b.equals(" ") && !b.matches(" [A-Za-zА-Яа-я ]+") || !b.matches(" [A-Za-zА-Яа-я ]+") && !b.equals(" ") && a.matches("[+]7\\d{10}") && b.matches("[A-Za-zА-Яа-я]+")) {
-                Person person = new Person(a, b, String.valueOf(service.getValue()), String.valueOf(service1.getValue()), String.valueOf(service2.getValue()));
+            if (a.matches("8\\d{10}") && b.matches("[A-Za-zА-Яа-я ]+") && !b.equals(" ") && !b.matches(" [A-Za-zА-Яа-я ]+")) {
+                Person person = new Person(a, b, String.valueOf(service.getValue()), String.valueOf(service1.getValue()),
+                        String.valueOf(service2.getValue()), String.valueOf(master.getValue()));
                 personData.add(person);
                 table.setItems(personData);
                 otmena();
@@ -204,6 +215,7 @@ public class HelloController {
                 pw.println(personData.get(i).getService());
                 pw.println(personData.get(i).getService1());
                 pw.println(personData.get(i).getService2());
+                pw.println(personData.get(i).getMaster());
             }
             pw.close();
         } catch (FileNotFoundException e) {
@@ -276,6 +288,7 @@ public class HelloController {
                     serviceEd.setText(service+service1+service2);
                     nsmEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getPhone());
                     priceEd.setText(String.valueOf(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getSummPrice()));
+                    masterEd.setText(String.valueOf(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getMaster()));
                     addDedForm();
                     printToFile();
                 }
