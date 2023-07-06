@@ -2,7 +2,6 @@ package com.mpm.demo;
 
 
 import javafx.fxml.FXML;
-
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
@@ -20,8 +19,10 @@ public class Function {
     public Label angleValue;
     public TextArea angleInput;
     public RadioButton RBx3;
-
     public RadioButton RBx2;
+    public RadioButton RBln;
+    public RadioButton RBlog10;
+    public RadioButton RBsqrt;
     public AnchorPane backgr;
 
     enum Func
@@ -31,7 +32,10 @@ public class Function {
         tg,
         ctg,
         x2,
-        x3
+        x3,
+        ln,
+        log10,
+        sqrt
     };
 
    Function.Func activeFunction = Function.Func.cos;
@@ -80,6 +84,14 @@ public class Function {
                         break;
                     case "cthRB":
                         activeFunction = Function.Func.ctg;
+                        break;case "RBln":
+                        activeFunction = Function.Func.ln;
+                        break;
+                        case "RBlog10":
+                        activeFunction = Function.Func.log10;
+                        break;
+                        case "RBsqrt":
+                        activeFunction = Func.sqrt;
                         break;
                     case "RBx3":
                         activeFunction = Function.Func.x3;
@@ -107,9 +119,22 @@ public class Function {
         else if (activeFunction == Function.Func.x3)
         {
             result = Double.toString(Math.pow(angleInputValue,3));
-        } else if (activeFunction == Function.Func.x2)
+        }
+        else if (activeFunction == Func.log10)
+        {
+            result = Double.toString(Math.log10(angleInputValue));
+        }
+        else if (activeFunction == Function.Func.ln)
+        {
+            result = Double.toString(Math.log(angleInputValue));
+        }
+        else if (activeFunction == Function.Func.x2)
         {
             result = Double.toString(Math.pow(angleInputValue,2));
+        }
+        else if (activeFunction == Function.Func.sqrt)
+        {
+            result = Double.toString(Math.pow(angleInputValue,0.5));
         }
         else
         {
