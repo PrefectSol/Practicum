@@ -69,7 +69,7 @@ public class HelloController {
     @FXML
     private Label priceEd;
     @FXML
-    private AnchorPane anchorPane;
+    private Button close;
     @FXML
     protected void clickAdd() {
         unVisible();
@@ -99,6 +99,8 @@ public class HelloController {
         table.setStyle("-fx-background-color:" + type + "; -fx-border-color:" + bordertype +
                "; -fx-selection-bar:" + selection + "; -fx-selection-bar-non-focused:" + selection);
         background.setStyle("-fx-background-color:" + type);
+        sEdit.setStyle("-fx-background-color:" + type);
+        close.setStyle("-fx-background-color: LightGray");
     }
     protected void unVisible() {
         table.setVisible(false);

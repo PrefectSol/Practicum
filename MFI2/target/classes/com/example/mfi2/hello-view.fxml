@@ -9,7 +9,7 @@
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.mfi2.HelloController">
   <children>
-    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <SplitPane fx:id="sPane" dividerPositions="0.5" minHeight="400.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <items>
         <AnchorPane fx:id="anchorPane" maxHeight="40.0" SplitPane.resizableWithParent="false">
           <children>
@@ -122,11 +122,11 @@
         </AnchorPane>
       </items>
     </SplitPane>
-      <AnchorPane fx:id="sEdit" prefHeight="400.0" prefWidth="800.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane fx:id="sEdit" prefHeight="400.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane prefHeight="108.0" prefWidth="800.0" style="-fx-background-color: #80808080;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <AnchorPane prefHeight="108.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="236.0" layoutY="29.0" prefHeight="51.0" prefWidth="400.0" text="Детали клиента" textFill="WHITE">
+                  <Label layoutX="236.0" layoutY="29.0" prefHeight="51.0" prefWidth="400.0" style="-fx-text-fill: Black;" text="Детали клиента" textFill="WHITE">
                      <font>
                         <Font name="Myriad Web Pro Condensed" size="43.0" />
                      </font>
@@ -136,7 +136,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="58.0" layoutY="118.0" prefHeight="51.0" prefWidth="80.0" text="ФИО: " textFill="GREY">
+            <Label layoutX="58.0" layoutY="118.0" prefHeight="51.0" prefWidth="80.0" style="-fx-text-fill: Black;" text="ФИО: " textFill="GREY">
                <font>
                   <Font size="25.0" />
                </font>
@@ -144,7 +144,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="priceEd" layoutX="149.0" layoutY="283.0" prefHeight="51.0" prefWidth="103.0" text="..." textFill="GREY">
+            <Label fx:id="priceEd" layoutX="149.0" layoutY="283.0" prefHeight="51.0" prefWidth="103.0" style="-fx-text-fill: Black;" text="..." textFill="GREY">
                <font>
                   <Font size="27.0" />
                </font>
@@ -152,7 +152,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="37.0" layoutY="230.0" prefHeight="51.0" prefWidth="103.0" text="Услуги:" textFill="GREY">
+            <Label layoutX="37.0" layoutY="230.0" prefHeight="51.0" prefWidth="103.0" style="-fx-text-fill: Black;" text="Услуги:" textFill="GREY">
                <font>
                   <Font size="25.0" />
                </font>
@@ -160,7 +160,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="nsmEd" layoutX="149.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
+            <Label fx:id="nsmEd" layoutX="149.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" style="-fx-text-fill: Black;" text="..." textFill="GREY">
                <font>
                   <Font size="27.0" />
                </font>
@@ -168,7 +168,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="55.0" layoutY="283.0" prefHeight="51.0" prefWidth="86.0" text="Цена: " textFill="GREY">
+            <Label layoutX="55.0" layoutY="283.0" prefHeight="51.0" prefWidth="86.0" style="-fx-text-fill: Black;" text="Цена: " textFill="GREY">
                <font>
                   <Font size="25.0" />
                </font>
@@ -176,7 +176,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="serviceEd" layoutX="149.0" layoutY="211.0" prefHeight="88.0" prefWidth="432.0" text="..." textFill="GREY">
+            <Label fx:id="serviceEd" layoutX="149.0" layoutY="211.0" prefHeight="88.0" prefWidth="432.0" style="-fx-text-fill: Black;" text="..." textFill="GREY">
                <font>
                   <Font size="19.0" />
                </font>
@@ -184,7 +184,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="28.0" layoutY="164.0" prefHeight="51.0" prefWidth="121.0" text="Телефон:" textFill="GREY">
+            <Label layoutX="28.0" layoutY="164.0" prefHeight="51.0" prefWidth="121.0" style="-fx-text-fill: Black;" text="Телефон:" textFill="GREY">
                <font>
                   <Font size="25.0" />
                </font>
@@ -192,7 +192,7 @@
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="telephoneEd" layoutX="149.0" layoutY="164.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
+            <Label fx:id="telephoneEd" layoutX="149.0" layoutY="164.0" prefHeight="51.0" prefWidth="593.0" style="-fx-text-fill: Black;" text="..." textFill="GREY">
                <font>
                   <Font size="27.0" />
                </font>
@@ -200,9 +200,9 @@
                   <Glow />
                </effect>
             </Label>
-            <Button layoutX="525.0" layoutY="316.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: #DCDCDC; -fx-border-color: #808080; -fx-background-radius: 10; -fx-border-radius: 10;" text="Закрыть" textFill="GREY" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="189.0">
+            <Button fx:id="close" layoutX="525.0" layoutY="316.0" mnemonicParsing="false" onAction="#exit" style="-fx-text-fill: Black;" text="Закрыть" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="189.0">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="37.0" />
+                  <Font size="40.0" />
                </font>
             </Button>
          </children>
