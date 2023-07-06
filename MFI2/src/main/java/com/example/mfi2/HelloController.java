@@ -255,9 +255,25 @@ public class HelloController {
                 public void handle(MouseEvent mouseEvent) {
                     sEdit.setVisible(true);
                     sPane.setVisible(false);
-                    nsmEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getFio());
-                    serviceEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService());
-                    telephoneEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getPhone());
+                    String service = personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService();
+                    String service1 = personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService1();
+                    String service2=personData.get(Integer.parseInt(String.valueOf(button.getId()))).getService2();
+                    if(service1.equals("Нет услуги")){
+                        service1 = "";
+                    }else {
+                        service1 = "\n" + service1;
+                    }
+                    if (service2.equals("Нет услуги")){
+                        service2 = "";
+                    }else {
+                        service2 = "\n" + service2;
+                    }
+
+
+                    telephoneEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getFio());
+                    serviceEd.setText(service+service1+service2);
+                    nsmEd.setText(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getPhone());
+                    priceEd.setText(String.valueOf(personData.get(Integer.parseInt(String.valueOf(button.getId()))).getSummPrice()));
                     addDedForm();
                     printToFile();
                 }

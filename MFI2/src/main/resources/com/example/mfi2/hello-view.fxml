@@ -126,7 +126,7 @@
          <children>
             <AnchorPane prefHeight="108.0" prefWidth="800.0" style="-fx-background-color: #80808080;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <children>
-                  <Label layoutX="236.0" layoutY="29.0" prefHeight="51.0" prefWidth="328.0" text="Детали клиента" textFill="WHITE">
+                  <Label layoutX="236.0" layoutY="29.0" prefHeight="51.0" prefWidth="400.0" text="Детали клиента" textFill="WHITE">
                      <font>
                         <Font name="Myriad Web Pro Condensed" size="43.0" />
                      </font>
@@ -136,65 +136,65 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label layoutX="64.0" layoutY="118.0" prefHeight="51.0" prefWidth="103.0" text="ФИО: " textFill="GREY">
+            <Label layoutX="58.0" layoutY="118.0" prefHeight="51.0" prefWidth="80.0" text="ФИО: " textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="25.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="priceEd" layoutX="167.0" layoutY="290.0" prefHeight="51.0" prefWidth="103.0" text="..." textFill="GREY">
+            <Label fx:id="priceEd" layoutX="149.0" layoutY="283.0" prefHeight="51.0" prefWidth="103.0" text="..." textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="27.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="46.0" layoutY="226.0" prefHeight="51.0" prefWidth="103.0" text="Услуга:" textFill="GREY">
+            <Label layoutX="37.0" layoutY="230.0" prefHeight="51.0" prefWidth="103.0" text="Услуги:" textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="25.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="nsmEd" layoutX="167.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
+            <Label fx:id="nsmEd" layoutX="149.0" layoutY="118.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="27.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="55.0" layoutY="290.0" prefHeight="51.0" prefWidth="86.0" text="Цена: " textFill="GREY">
+            <Label layoutX="55.0" layoutY="283.0" prefHeight="51.0" prefWidth="86.0" text="Цена: " textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="25.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="serviceEd" layoutX="167.0" layoutY="226.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
+            <Label fx:id="serviceEd" layoutX="149.0" layoutY="211.0" prefHeight="88.0" prefWidth="432.0" text="..." textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="19.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label layoutX="28.0" layoutY="169.0" prefHeight="51.0" prefWidth="139.0" text="Телефон:" textFill="GREY">
+            <Label layoutX="28.0" layoutY="164.0" prefHeight="51.0" prefWidth="121.0" text="Телефон:" textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="25.0" />
                </font>
                <effect>
                   <Glow />
                </effect>
             </Label>
-            <Label fx:id="telephoneEd" layoutX="167.0" layoutY="169.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
+            <Label fx:id="telephoneEd" layoutX="149.0" layoutY="164.0" prefHeight="51.0" prefWidth="593.0" text="..." textFill="GREY">
                <font>
-                  <Font name="Myriad Web Pro Condensed" size="30.0" />
+                  <Font size="27.0" />
                </font>
                <effect>
                   <Glow />

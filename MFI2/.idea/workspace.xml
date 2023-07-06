@@ -8,12 +8,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/items.txt" beforeDir="false" afterPath="$PROJECT_DIR$/items.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/mfi2/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/mfi2/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/mfi2/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/mfi2/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/mfi2/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
