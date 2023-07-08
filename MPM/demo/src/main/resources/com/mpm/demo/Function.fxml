@@ -22,7 +22,7 @@
          <padding>
             <Insets right="18.0" />
          </padding></Label>
-      <RadioButton fx:id="RBx2" layoutY="141.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="42.0" text="а^2" toggleGroup="$AngleFunctions" />
+      <RadioButton fx:id="RBx2" layoutY="141.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="92.0" text="а^2" toggleGroup="$AngleFunctions" />
       <RadioButton fx:id="RBx3" layoutY="175.0" mnemonicParsing="false" prefHeight="37.0" text="a^3" toggleGroup="$AngleFunctions" />
       <ImageView fitHeight="129.0" fitWidth="216.0" layoutX="124.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
          <image>
