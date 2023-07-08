@@ -12,7 +12,7 @@
             <ToggleGroup fx:id="AngleFunctions" />
          </toggleGroup></RadioButton>
       <RadioButton fx:id="thRB" layoutY="75.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="111.0" text="Tan(a)" toggleGroup="$AngleFunctions" AnchorPane.leftAnchor="0.0" />
-      <RadioButton fx:id="cosRB" layoutY="40.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="101.0" text="Cos(a)" toggleGroup="$AngleFunctions" AnchorPane.leftAnchor="0.0" />
+      <RadioButton fx:id="cosRB" layoutY="40.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="101.0" selected="true" text="Cos(a)" toggleGroup="$AngleFunctions" AnchorPane.leftAnchor="0.0" />
       <RadioButton fx:id="sinRB" layoutY="8.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="101.0" text="Sin(a) " toggleGroup="$AngleFunctions" AnchorPane.leftAnchor="0.0" />
       <Label layoutX="137.0" layoutY="18.0" prefHeight="17.0" prefWidth="177.0" text="Введите а " />
       <TextArea fx:id="angleInput" layoutX="137.0" layoutY="45.0" prefHeight="37.0" prefWidth="177.0" />
